@@ -15,6 +15,11 @@
 		638D3CAF1C77BD8F004F9CA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638D3CAD1C77BD8F004F9CA2 /* LaunchScreen.storyboard */; };
 		638D3CBA1C77BD8F004F9CA2 /* wantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CB91C77BD8F004F9CA2 /* wantTests.m */; };
 		638D3CC51C77BD8F004F9CA2 /* wantUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CC41C77BD8F004F9CA2 /* wantUITests.m */; };
+		638D3CD41C77BE4F004F9CA2 /* OKProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CD31C77BE4F004F9CA2 /* OKProductCategory.m */; };
+		638D3CD81C77BED6004F9CA2 /* OKProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CD71C77BED6004F9CA2 /* OKProduct.m */; };
+		638D3CDB1C77C10D004F9CA2 /* OKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CDA1C77C10D004F9CA2 /* OKUser.m */; };
+		638D3CDE1C77C24F004F9CA2 /* OKCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CDD1C77C24F004F9CA2 /* OKCart.m */; };
+		638D3CE11C77C443004F9CA2 /* OKConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CE01C77C443004F9CA2 /* OKConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		638D3CC01C77BD8F004F9CA2 /* wantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		638D3CC41C77BD8F004F9CA2 /* wantUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wantUITests.m; sourceTree = "<group>"; };
 		638D3CC61C77BD8F004F9CA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		638D3CD21C77BE4F004F9CA2 /* OKProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OKProductCategory.h; path = ../OKProductCategory.h; sourceTree = "<group>"; };
+		638D3CD31C77BE4F004F9CA2 /* OKProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OKProductCategory.m; path = ../OKProductCategory.m; sourceTree = "<group>"; };
+		638D3CD61C77BED6004F9CA2 /* OKProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKProduct.h; sourceTree = "<group>"; };
+		638D3CD71C77BED6004F9CA2 /* OKProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKProduct.m; sourceTree = "<group>"; };
+		638D3CD91C77C10D004F9CA2 /* OKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKUser.h; sourceTree = "<group>"; };
+		638D3CDA1C77C10D004F9CA2 /* OKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKUser.m; sourceTree = "<group>"; };
+		638D3CDC1C77C24F004F9CA2 /* OKCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKCart.h; sourceTree = "<group>"; };
+		638D3CDD1C77C24F004F9CA2 /* OKCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKCart.m; sourceTree = "<group>"; };
+		638D3CDF1C77C443004F9CA2 /* OKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKConstants.h; sourceTree = "<group>"; };
+		638D3CE01C77C443004F9CA2 /* OKConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +118,7 @@
 			children = (
 				638D3CA21C77BD8F004F9CA2 /* AppDelegate.h */,
 				638D3CA31C77BD8F004F9CA2 /* AppDelegate.m */,
+				638D3CD51C77BE59004F9CA2 /* Models */,
 				638D3CA51C77BD8F004F9CA2 /* ViewController.h */,
 				638D3CA61C77BD8F004F9CA2 /* ViewController.m */,
 				638D3CA81C77BD8F004F9CA2 /* Main.storyboard */,
@@ -138,6 +154,23 @@
 				638D3CC61C77BD8F004F9CA2 /* Info.plist */,
 			);
 			path = wantUITests;
+			sourceTree = "<group>";
+		};
+		638D3CD51C77BE59004F9CA2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				638D3CD21C77BE4F004F9CA2 /* OKProductCategory.h */,
+				638D3CD31C77BE4F004F9CA2 /* OKProductCategory.m */,
+				638D3CD61C77BED6004F9CA2 /* OKProduct.h */,
+				638D3CD71C77BED6004F9CA2 /* OKProduct.m */,
+				638D3CD91C77C10D004F9CA2 /* OKUser.h */,
+				638D3CDA1C77C10D004F9CA2 /* OKUser.m */,
+				638D3CDC1C77C24F004F9CA2 /* OKCart.h */,
+				638D3CDD1C77C24F004F9CA2 /* OKCart.m */,
+				638D3CDF1C77C443004F9CA2 /* OKConstants.h */,
+				638D3CE01C77C443004F9CA2 /* OKConstants.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +305,12 @@
 			files = (
 				638D3CA71C77BD8F004F9CA2 /* ViewController.m in Sources */,
 				638D3CA41C77BD8F004F9CA2 /* AppDelegate.m in Sources */,
+				638D3CD81C77BED6004F9CA2 /* OKProduct.m in Sources */,
 				638D3CA11C77BD8F004F9CA2 /* main.m in Sources */,
+				638D3CDB1C77C10D004F9CA2 /* OKUser.m in Sources */,
+				638D3CD41C77BE4F004F9CA2 /* OKProductCategory.m in Sources */,
+				638D3CDE1C77C24F004F9CA2 /* OKCart.m in Sources */,
+				638D3CE11C77C443004F9CA2 /* OKConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
