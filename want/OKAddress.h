@@ -22,9 +22,4 @@
 //Latitude and Longitude values are stored as key-value
 @property (nonatomic,retain) NSDictionary *addressLocation;
 
-@property (nonatomic,retain) NSString *cardExpirationDate;
-
-//We must not store this. But we will for this hackathon.
-@property (nonatomic,retain) NSString *cardCVC2;
-
 @end

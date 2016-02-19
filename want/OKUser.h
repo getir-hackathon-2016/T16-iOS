@@ -31,4 +31,6 @@
 
 @property (nonatomic,retain) NSMutableArray *userPreviousOrders;
 
++ (id) currentUser;
+
 @end

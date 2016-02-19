@@ -10,6 +10,9 @@
 
 @interface OKConstants : NSObject
 
+//Base API URL
+extern NSString* const kBaseAPIUrl;
+
 //Used in OKCart as cartDeliveryStatus
 extern int const kCartStatusNew;
 extern int const kCartStatusOrdered;
