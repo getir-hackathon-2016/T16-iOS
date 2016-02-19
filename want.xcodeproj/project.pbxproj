@@ -47,6 +47,7 @@
 		638D3D321C77CDDB004F9CA2 /* OKOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D311C77CDDB004F9CA2 /* OKOrderViewController.m */; };
 		638D3D351C77CDE8004F9CA2 /* OKAddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */; };
 		638D3D381C77CE14004F9CA2 /* OKUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */; };
+		638D3D3E1C77D099004F9CA2 /* OKConsulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D3D1C77D099004F9CA2 /* OKConsulate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKAddCreditCardViewController.m; sourceTree = "<group>"; };
 		638D3D361C77CE14004F9CA2 /* OKUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKUserProfileViewController.h; sourceTree = "<group>"; };
 		638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKUserProfileViewController.m; sourceTree = "<group>"; };
+		638D3D3C1C77D099004F9CA2 /* OKConsulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKConsulate.h; sourceTree = "<group>"; };
+		638D3D3D1C77D099004F9CA2 /* OKConsulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKConsulate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,8 @@
 				638D3D1A1C77CD17004F9CA2 /* View Controllers */,
 				638D3CA51C77BD8F004F9CA2 /* ViewController.h */,
 				638D3CA61C77BD8F004F9CA2 /* ViewController.m */,
+				638D3D3C1C77D099004F9CA2 /* OKConsulate.h */,
+				638D3D3D1C77D099004F9CA2 /* OKConsulate.m */,
 				638D3CA81C77BD8F004F9CA2 /* Main.storyboard */,
 				638D3CAB1C77BD8F004F9CA2 /* Assets.xcassets */,
 				638D3CAD1C77BD8F004F9CA2 /* LaunchScreen.storyboard */,
@@ -468,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				638D3D3E1C77D099004F9CA2 /* OKConsulate.m in Sources */,
 				638D3D0B1C77CA43004F9CA2 /* AFAutoPurgingImageCache.m in Sources */,
 				638D3CA71C77BD8F004F9CA2 /* ViewController.m in Sources */,
 				638D3CA41C77BD8F004F9CA2 /* AppDelegate.m in Sources */,
@@ -642,6 +648,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = want/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okaris.want;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -653,6 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = want/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.okaris.want;
 				PRODUCT_NAME = "$(TARGET_NAME)";
