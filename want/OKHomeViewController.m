@@ -10,6 +10,7 @@
 #import "RZTransitions.h"
 #import "Chameleon.h"
 #import "OKUser.h"
+#import "RESideMenu.h"
 
 @implementation OKHomeViewController
 
@@ -25,6 +26,16 @@
     
     
     [self setTransitioningDelegate:[RZTransitionsManager shared]];
+    
+    self.navigationItem.hidesBackButton=YES;
+    
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"1180-align-justify-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self.sideMenuViewController action:@selector(presentLeftMenuViewController)];
+    
+    self.navigationItem.leftBarButtonItem = menuButton;
+    
+    UIBarButtonItem *cartButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self action:@selector(showCart)];
+    
+    self.navigationItem.rightBarButtonItem = cartButton;
     
     [super viewDidLoad];
 }

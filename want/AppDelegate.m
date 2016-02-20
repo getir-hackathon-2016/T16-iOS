@@ -8,6 +8,11 @@
 
 #import "AppDelegate.h"
 #import "Chameleon.h"
+#import "RESideMenu.h"
+
+#import "OKMainNavigationController.h"
+#import "OKHomeViewController.h"
+#import "OKMenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    //Theme the app here.
     NSDictionary *textTitleOptions =
     [NSDictionary dictionaryWithObjectsAndKeys:[UIColor flatWhiteColor],
      NSForegroundColorAttributeName,
@@ -28,9 +33,9 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
     textTitleOptions =
-    [NSDictionary dictionaryWithObjectsAndKeys:[UIColor flatWhiteColor],
+    [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],
      NSForegroundColorAttributeName, nil];
-    [[UINavigationBar appearance] setTintColor:[UIColor flatWhiteColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
     [[UINavigationBar appearance] setTranslucent:YES];
     
@@ -43,6 +48,24 @@
     
     [[UISegmentedControl appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
     [[UISearchBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
+    
+    //Initializing main navigation and menu
+    
+    // Create content and menu controllers
+    //
+    OKMainNavigationController *navigationController = [[OKMainNavigationController alloc] initWithRootViewController:[[OKHomeViewController alloc] init]];
+    OKMenuViewController *leftMenuViewController = [[OKMenuViewController alloc] init];
+    
+    // Create side menu controller
+    //
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                    leftMenuViewController:leftMenuViewController
+                                                                   rightMenuViewController:nil];
+    
+    // Make it a root controller
+    //
+    self.window.rootViewController = sideMenuViewController;
+    
     
     return YES;
 }
