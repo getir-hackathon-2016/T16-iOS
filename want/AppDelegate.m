@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Chameleon.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,34 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    NSDictionary *textTitleOptions =
+    [NSDictionary dictionaryWithObjectsAndKeys:[UIColor flatWhiteColor],
+     NSForegroundColorAttributeName,
+     [UIColor flatWhiteColor],
+     NSForegroundColorAttributeName, nil];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    textTitleOptions =
+    [NSDictionary dictionaryWithObjectsAndKeys:[UIColor flatWhiteColor],
+     NSForegroundColorAttributeName, nil];
+    [[UINavigationBar appearance] setTintColor:[UIColor flatWhiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
+    [[UINavigationBar appearance] setTranslucent:YES];
+    
+    [[UIToolbar appearance] setTintColor:[UIColor flatWhiteColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor flatWatermelonColor]];
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class],nil] setTintColor:[UIColor flatWhiteColor]];
+    
+    [[UITabBar appearance] setBarTintColor:[UIColor flatWhiteColor]];
+    [[UITabBar appearance] setTintColor:[UIColor flatWatermelonColor]];
+    
+    [[UISegmentedControl appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
+    [[UISearchBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
+    
     return YES;
 }
 

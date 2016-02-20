@@ -341,7 +341,7 @@ static CGFloat const kFloatingLabelHideAnimationDuration = 0.3f;
     
     //Add a thin line on the bottom for ease of eye
     CALayer *bottomBorder = [CALayer layer];
-    bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height, self.frame.size.width, 1.0f);
+    bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height-1, self.frame.size.width, 1.0f);
     bottomBorder.backgroundColor = [self tintColor].CGColor;
     [self.layer addSublayer:bottomBorder];
 

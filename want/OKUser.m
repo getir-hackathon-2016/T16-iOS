@@ -7,6 +7,8 @@
 //
 
 #import "OKUser.h"
+#import "UICKeyChainStore.h"
+#import "OKConstants.h"
 
 @implementation OKUser
 
@@ -14,7 +16,14 @@
 {
     if (self = [super init])
     {
-        //Do any custom initialization here.
+        UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithServer:[NSURL URLWithString:kBaseAPIUrl] protocolType:UICKeyChainStoreProtocolTypeHTTPS];
+        
+        NSString *token = [keychain stringForKey:@"sessionToken"];
+        
+        if (token.length > 0) {
+            self.userSessionToken = token;
+        }
+        
     }
     return self;
 }

@@ -8,13 +8,14 @@
 
 #import "OKHomeViewController.h"
 #import "RZTransitions.h"
+#import "Chameleon.h"
 #import "OKUser.h"
 
 @implementation OKHomeViewController
 
 - (void) viewDidLoad
 {
-    [self.view setBackgroundColor:[UIColor blackColor]];
+    [self.view setBackgroundColor:[UIColor flatWatermelonColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
     
@@ -31,7 +32,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     if (!willPresentAuthView) {
-        if (![[OKUser currentUser] userId]) {
+        if (![[OKUser currentUser] userSessionToken]) {
             
             OKLoginViewController *loginView = [[OKLoginViewController alloc] init];
             

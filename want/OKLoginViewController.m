@@ -33,6 +33,10 @@
     
     [usernameTextField setTextAlignment:NSTextAlignmentCenter];
     
+    [usernameTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    
+    [usernameTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+    
     [usernameTextField setFloatingLabelTextColor:[UIColor flatLimeColor]];
     
     [usernameTextField setTintColor:[UIColor flatLimeColor]];
@@ -47,6 +51,12 @@
     passwordTextField = [[JVFloatLabeledTextField alloc] init];
     
     [passwordTextField setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    [passwordTextField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    
+    [passwordTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
+    
+    [passwordTextField setSecureTextEntry:YES];
     
     [passwordTextField setTextAlignment:NSTextAlignmentCenter];
 
@@ -166,13 +176,8 @@
 
 - (void) doLogin
 {
-    [OKConsulate loginUserWithUsername:usernameTextField.text andPassword:usernameTextField.text withCompletionBlock:^(BOOL succeeded, NSError *error) {
-        NSLog(@"%@:%@",succeeded?@"Success:":@"Error:",error.description);
-        
+    [OKConsulate loginUserWithUsername:usernameTextField.text andPassword:passwordTextField.text withCompletionBlock:^(BOOL succeeded, NSError *error) {        
         if (succeeded) {
-            OKUser *currentUser = [OKUser currentUser];
-            currentUser.userId = 1;
-            
             [self.delegate loginFinished];
         }
     }];
