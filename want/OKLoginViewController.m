@@ -16,7 +16,7 @@
 
 - (void) viewDidLoad
 {
-    [self.view setBackgroundColor:[UIColor flatWatermelonColor]];
+    [self.view setBackgroundColor:[UIColor flatRedColor]];
     
     loginContainerView = [[UIView alloc] init];
     
@@ -37,9 +37,9 @@
     
     [usernameTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
     
-    [usernameTextField setFloatingLabelTextColor:[UIColor flatLimeColor]];
+    [usernameTextField setFloatingLabelTextColor:[UIColor flatRedColor]];
     
-    [usernameTextField setTintColor:[UIColor flatLimeColor]];
+    [usernameTextField setTintColor:[UIColor flatRedColor]];
     
     [usernameTextField setTextColor:[UIColor whiteColor]];
     
@@ -60,9 +60,9 @@
     
     [passwordTextField setTextAlignment:NSTextAlignmentCenter];
 
-    [passwordTextField setFloatingLabelTextColor:[UIColor flatLimeColor]];
+    [passwordTextField setFloatingLabelTextColor:[UIColor flatRedColor]];
 
-    [passwordTextField setTintColor:[UIColor flatLimeColor]];
+    [passwordTextField setTintColor:[UIColor flatRedColor]];
     
     [passwordTextField setTextColor:[UIColor whiteColor]];
 
@@ -85,7 +85,7 @@
     
     [loginButton setTitle:NSLocalizedString(@"Login", @"Login") forState:UIControlStateNormal];
     
-    [loginButton.layer setBorderColor:[UIColor flatLimeColor].CGColor];
+    [loginButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
     
     [loginButton.layer setBorderWidth:1];
     
@@ -103,7 +103,7 @@
     
     [signupButton setTitle:NSLocalizedString(@"Signup", @"Signup") forState:UIControlStateNormal];
     
-    [signupButton.layer setBorderColor:[UIColor flatLimeColor].CGColor];
+    [signupButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
     
     [signupButton.layer setBorderWidth:1];
     
@@ -123,7 +123,7 @@
     
     [forgotPasswordButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
     
-    [forgotPasswordButton setTitleColor:[UIColor flatLimeColor] forState:UIControlStateNormal];
+    [forgotPasswordButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
     
     [loginContainerView addSubview:forgotPasswordButton];
     
