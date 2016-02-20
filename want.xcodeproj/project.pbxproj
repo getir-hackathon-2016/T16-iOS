@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBA1C7809C200599647 /* RECommonFunctions.m */; };
+		63529DC01C7809C200599647 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBC1C7809C200599647 /* RESideMenu.m */; };
+		63529DC11C7809C200599647 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */; };
 		638D3CA11C77BD8F004F9CA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CA01C77BD8F004F9CA2 /* main.m */; };
 		638D3CA41C77BD8F004F9CA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CA31C77BD8F004F9CA2 /* AppDelegate.m */; };
 		638D3CA71C77BD8F004F9CA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3CA61C77BD8F004F9CA2 /* ViewController.m */; };
@@ -105,6 +108,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63529DB91C7809C200599647 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		63529DBA1C7809C200599647 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		63529DBB1C7809C200599647 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		63529DBC1C7809C200599647 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		63529DBD1C7809C200599647 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		638D3C9C1C77BD8F004F9CA2 /* want.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = want.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638D3CA01C77BD8F004F9CA2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		638D3CA21C77BD8F004F9CA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -300,6 +309,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63529DB81C7809C200599647 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				63529DB91C7809C200599647 /* RECommonFunctions.h */,
+				63529DBA1C7809C200599647 /* RECommonFunctions.m */,
+				63529DBB1C7809C200599647 /* RESideMenu.h */,
+				63529DBC1C7809C200599647 /* RESideMenu.m */,
+				63529DBD1C7809C200599647 /* UIViewController+RESideMenu.h */,
+				63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */,
+			);
+			path = RESideMenu;
+			sourceTree = "<group>";
+		};
 		638D3C931C77BD8F004F9CA2 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +347,7 @@
 			children = (
 				638D3CA21C77BD8F004F9CA2 /* AppDelegate.h */,
 				638D3CA31C77BD8F004F9CA2 /* AppDelegate.m */,
+				63529DB81C7809C200599647 /* RESideMenu */,
 				638D3DC01C780463004F9CA2 /* UICKeyChainStore */,
 				638D3D741C77F5C2004F9CA2 /* RZTransitions */,
 				638D3D4C1C77EE58004F9CA2 /* Chameleon */,
@@ -791,6 +814,7 @@
 				638D3DB81C77F5C2004F9CA2 /* UIImage+RZTransitionsFastImageBlur.m in Sources */,
 				638D3DAF1C77F5C2004F9CA2 /* RZCardSlideAnimationController.m in Sources */,
 				638D3D0D1C77CA43004F9CA2 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */,
 				638D3D0C1C77CA43004F9CA2 /* AFImageDownloader.m in Sources */,
 				638D3DAC1C77F5C2004F9CA2 /* RZPinchInteractionController.m in Sources */,
 				638D3DB71C77F5C2004F9CA2 /* NSObject+RZTransitionsViewHelpers.m in Sources */,
@@ -798,11 +822,13 @@
 				638D3D101C77CA43004F9CA2 /* UIImageView+AFNetworking.m in Sources */,
 				638D3D091C77CA43004F9CA2 /* AFURLResponseSerialization.m in Sources */,
 				638D3DB11C77F5C2004F9CA2 /* RZRectZoomAnimationController.m in Sources */,
+				63529DC01C7809C200599647 /* RESideMenu.m in Sources */,
 				638D3D471C77DDBB004F9CA2 /* JVFloatLabeledTextView.m in Sources */,
 				638D3D6D1C77EE58004F9CA2 /* UIColor+Chameleon.m in Sources */,
 				638D3DAE1C77F5C2004F9CA2 /* RZTransitionsManager.m in Sources */,
 				638D3DAA1C77F5C2004F9CA2 /* RZHorizontalInteractionController.m in Sources */,
 				638D3D731C77EE58004F9CA2 /* UIViewController+Chameleon.m in Sources */,
+				63529DC11C7809C200599647 /* UIViewController+RESideMenu.m in Sources */,
 				638D3DA81C77F5C2004F9CA2 /* RZUniqueTransition.m in Sources */,
 				638D3D051C77CA43004F9CA2 /* AFHTTPSessionManager.m in Sources */,
 				638D3D4B1C77E96E004F9CA2 /* UIView+AutoLayout.m in Sources */,
