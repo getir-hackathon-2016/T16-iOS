@@ -11,12 +11,19 @@
 #import "Chameleon.h"
 #import "OKUser.h"
 #import "RESideMenu.h"
+#import "OKCategoryCollectionViewCell.h"
+#import "OKProductListViewController.h"
+
+#define TABLE_VIEW_HEIGHT self.view.frame.size.height
+#define SCREEN_WIDTH self.view.frame.size.width
+#define TABLE_VIEW_HEADER_HEIGHT 320.0f
+
 
 @implementation OKHomeViewController
 
 - (void) viewDidLoad
 {
-    [self.view setBackgroundColor:[UIColor flatWatermelonColor]];
+    [self.view setBackgroundColor:[UIColor flatRedColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
     
@@ -37,7 +44,21 @@
     
     self.navigationItem.rightBarButtonItem = cartButton;
     
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [self.collectionView setShowsVerticalScrollIndicator:NO];
+    
     [super viewDidLoad];
+}
+
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [self setupCollectionView];
+    [self setupMapView];
+    
+    [super viewWillAppear:animated];
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -57,8 +78,27 @@
         }
     }
     
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    [self.locationManager requestWhenInUseAuthorization];
+    
+    [self.locationManager startUpdatingLocation];
+    
     [super viewDidAppear:animated];
 }
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    //User location changed.
+}
+
 
 - (void) presentSignupView
 {
@@ -84,5 +124,245 @@
 
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+-(void)setupCollectionView{
+    if (!self.collectionView) {
+        
+        UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
+
+        self.collectionView = [[UICollectionView alloc]  initWithFrame: CGRectMake(0, 0, SCREEN_WIDTH, self.view.frame.size.height) collectionViewLayout:layout];
+        
+        [self.collectionView registerClass:[OKCategoryCollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+        
+        [self.collectionView registerClass:[UICollectionReusableView class]
+                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader
+                       withReuseIdentifier:@"HeaderView"];
+        
+        [self.collectionView registerClass:[UICollectionReusableView class]
+                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader
+                       withReuseIdentifier:@"CategoriesView"];
+        
+        [self.collectionView setBackgroundColor:[UIColor clearColor]];
+        
+        
+        self.collectionView.dataSource   = self;
+        self.collectionView.delegate     = self;
+        [self.view addSubview:self.collectionView];
+        
+    }
+}
+
+-(void)setupMapView{
+    if (!self.mapView) {
+        
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TABLE_VIEW_HEIGHT)];
+        
+        self.mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TABLE_VIEW_HEADER_HEIGHT)];
+        [self.mapView.layer setMasksToBounds:NO];
+        [self.mapView setShowsUserLocation:YES];
+        self.mapView.mapType = MKMapTypeStandard;
+        self.mapView.showsPointsOfInterest = NO;
+        self.mapView.tintColor = [UIColor flatMintColor];
+        self.mapView.delegate = self;
+        
+        [view addSubview:self.mapView];
+        
+        //Main Button
+        UIButton *mainButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [mainButton setTitle:@"" forState:UIControlStateNormal];
+        [mainButton setFrame:CGRectMake(5, 5, SCREEN_WIDTH - 10, 50)];
+        [mainButton setBackgroundColor:[UIColor whiteColor]];
+        
+        UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:mainButton.bounds];
+        mainButton.layer.masksToBounds = NO;
+        mainButton.layer.shadowColor = [UIColor grayColor].CGColor;
+        mainButton.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+        mainButton.layer.shadowOpacity = 0.4f;
+        mainButton.layer.shadowPath = shadowPath.CGPath;
+        
+        //Detail Disclosure button
+        UITableViewCell *disclosure = [[UITableViewCell alloc] init];
+        [mainButton addSubview:disclosure];
+        disclosure.frame = mainButton.bounds;
+        disclosure.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        disclosure.userInteractionEnabled = NO;
+        
+        //Add Texts
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, SCREEN_WIDTH - 60, 15)];
+        [headerLabel setFont:[UIFont systemFontOfSize:16 weight:UIFontWeightSemibold]];
+        [headerLabel setText:NSLocalizedString(@"DELIVERY ADDRESS", @"DELIVERY ADDRESS")];
+        [headerLabel setTextColor:[UIColor flatRedColor]];
+        
+        UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, SCREEN_WIDTH - 60, 20)];
+        [locationLabel setFont:[UIFont systemFontOfSize:16 weight:UIFontWeightLight]];
+        [locationLabel setText:NSLocalizedString(@"Locating your address", @"Locating your address")];
+        [locationLabel setTextColor:[UIColor flatRedColor]];
+        
+        [mainButton addSubview:headerLabel];
+        [mainButton addSubview:locationLabel];
+        
+        [view addSubview:mainButton];
+        
+        [self.collectionView setBackgroundView:view];
+        
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offset = scrollView.contentOffset.y;
+    [self animationForScroll:offset];
+}
+
+
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    CGFloat offset = self.collectionView.contentOffset.y;
+    [self animationForScroll:offset];
+}
+
+
+- (void) animationForScroll:(CGFloat) offset {
+    
+    CATransform3D headerTransform = CATransform3DIdentity;
+    
+    // DOWN -----------------
+    
+    if (offset < 0) {
+        
+        CGFloat headerScaleFactor = -(offset) / self.mapView.bounds.size.height;
+        CGFloat headerSizevariation = ((self.mapView.bounds.size.height * (1.0 + headerScaleFactor)) - self.mapView.bounds.size.height)/2.0;
+        headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0);
+        headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0);
+        self.mapView.layer.transform = headerTransform;
+        
+        
+    }else{
+        self.mapView.layer.transform = CATransform3DIdentity;
+        
+    }
+}
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return 0;
+    }else{
+        return 15;
+    }
+}
+
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    OKCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.imageView.image = [UIImage imageNamed:@"oyun.jpg"];
+    cell.titleLabel.text = @"Oyun";
+    
+    return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UICollectionReusableView *reusableview = nil;
+    
+    if (indexPath.section == 0) {
+        
+        reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        
+        [reusableview setUserInteractionEnabled:NO];
+        
+    }else if (indexPath.section == 1) {
+        
+        reusableview = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"CategoriesView" forIndexPath:indexPath];
+        
+        [reusableview setBackgroundColor:[UIColor whiteColor]];
+        
+        CALayer *bottomBorder = [CALayer layer];
+        bottomBorder.frame = CGRectMake(0.0f, reusableview.frame.size.height - .4f, reusableview.frame.size.width, .4f);
+        bottomBorder.backgroundColor = [UIColor flatRedColor].CGColor;
+        [reusableview.layer addSublayer:bottomBorder];
+        
+        UILabel *categoriesLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 150, 40)];
+        [categoriesLabel setTextColor:[UIColor flatRedColor]];
+        [categoriesLabel setText:NSLocalizedString(@"Categories", @"Categories")];
+        [categoriesLabel setFont:[UIFont systemFontOfSize:13 weight:UIFontWeightLight]];
+        
+        [reusableview addSubview:categoriesLabel];
+        
+        UILabel *estimatedDeliveryTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 90, 0, 80, 40)];
+        [estimatedDeliveryTimeLabel setTextAlignment:NSTextAlignmentRight];
+        [estimatedDeliveryTimeLabel setTextColor:[UIColor flatRedColor]];
+        [estimatedDeliveryTimeLabel setText:@"9mn"];
+        [estimatedDeliveryTimeLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightRegular]];
+        
+        [reusableview addSubview:estimatedDeliveryTimeLabel];
+    }
+    
+    
+    
+    return reusableview;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return CGSizeMake(self.view.frame.size.width, TABLE_VIEW_HEADER_HEIGHT);
+    }else {
+        return CGSizeMake(self.view.frame.size.width, 40);
+    }
+
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(collectionView.frame.size.width/3 - 0.4, collectionView.frame.size.width/3 - 0.4);
+}
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0.2f,0.2f,0.2f,0.2f);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    
+    return 0.2;
+}
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0.2;
+}
+
+- (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    OKProductListViewController *productList = [[OKProductListViewController alloc] init];
+    productList.categoryId = 1;
+    [self.navigationController pushViewController:productList animated:YES];
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
+    MKAnnotationView *aV;
+    for (aV in views) {
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.45];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [aV setAlpha:1];
+        [UIView commitAnimations];
+        
+    }
+}
+
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 
 @end

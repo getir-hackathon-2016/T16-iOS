@@ -9,8 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "OKLoginViewController.h"
 
-@interface OKHomeViewController : UIViewController <OKLoginViewControllerDelegate>
+@import MapKit;
+
+@interface OKHomeViewController : UIViewController <OKLoginViewControllerDelegate,MKMapViewDelegate, CLLocationManagerDelegate, UICollectionViewDataSource,UICollectionViewDelegate>
 {
     BOOL willPresentAuthView;
+    BOOL firstLocationUpdate_;
+    CLLocationCoordinate2D storedLocation;
+    NSMutableArray *productCategories;
 }
+
+
+@property(nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) MKMapView *mapView;
+
 @end
