@@ -18,7 +18,7 @@
 
 + (BOOL) logoutWithCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
 
-+ (NSArray *) fetchProductCategoriesWithCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
++ (NSDictionary *) fetchProductCategoriesWithCompletionBlock: (void (^)(BOOL succeeded, NSError *error, NSArray *result))completionBlock;
 
 + (NSArray *) fetchAllProductsAndSkip: (int)skip withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
 + (NSArray *) fetchProductsWithCategory:(int)categoryId withCompletionBlock: (int)skip withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;

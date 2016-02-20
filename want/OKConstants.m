@@ -10,12 +10,8 @@
 
 @implementation OKConstants
 
-NSString* const kBaseAPIUrl = @"http://qeremy.com:3000";
+NSString* const kBaseAPIUrl = @"https://t16.herokuapp.com";
 
-int const kCartStatusNew = 0;
-int const kCartStatusOrdered = 1;
-int const kCartStatusConfirmed = 2;
-int const kCartStatusInTransit = 3;
-int const kCartStatusDelivered = 4;
+
 
 @end

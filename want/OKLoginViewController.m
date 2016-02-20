@@ -11,12 +11,14 @@
 #import "Chameleon.h"
 #import "OKUser.h"
 #import "OKConsulate.h"
+#import "OKConstants.h"
+#import "UITextField+Shake.h"
 
 @implementation OKLoginViewController
 
 - (void) viewDidLoad
 {
-    [self.view setBackgroundColor:[UIColor flatRedColor]];
+    [self.view setBackgroundColor:[UIColor flatRedColorDark]];
     
     loginContainerView = [[UIView alloc] init];
     
@@ -179,6 +181,20 @@
     [OKConsulate loginUserWithUsername:usernameTextField.text andPassword:passwordTextField.text withCompletionBlock:^(BOOL succeeded, NSError *error) {        
         if (succeeded) {
             [self.delegate loginFinished];
+        }else{
+            switch (error.code) {
+                case kAuthPasswordIsWrong:
+                    [passwordTextField shake];
+                    break;
+                case kAuthPasswordMissing:
+                    [passwordTextField shake];
+                    break;
+                case kAuthUsernameMissing:
+                    [usernameTextField shake];
+                    break;
+                default:
+                    break;
+            }
         }
     }];
     

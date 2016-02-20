@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OKProductListViewController : UIViewController
-
+@interface OKProductListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic) int categoryId;
+@property (nonatomic,retain) UITableView *tableView;
 @end

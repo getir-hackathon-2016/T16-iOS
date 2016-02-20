@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631FD00A1C78AF14002361AA /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD0091C78AF14002361AA /* UITextField+Shake.m */; };
 		63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBA1C7809C200599647 /* RECommonFunctions.m */; };
 		63529DC01C7809C200599647 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBC1C7809C200599647 /* RESideMenu.m */; };
 		63529DC11C7809C200599647 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */; };
@@ -20,8 +21,8 @@
 		63529DD71C7814DA00599647 /* 762-shopping-bag-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DD41C7814DA00599647 /* 762-shopping-bag-toolbar.png */; };
 		63529DD81C7814DA00599647 /* 762-shopping-bag-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DD51C7814DA00599647 /* 762-shopping-bag-toolbar@2x.png */; };
 		63529DD91C7814DA00599647 /* 762-shopping-bag-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DD61C7814DA00599647 /* 762-shopping-bag-toolbar@3x.png */; };
-		63529DE91C78420200599647 /* dondurma.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDB1C78420200599647 /* dondurma.png */; };
-		63529DEA1C78420200599647 /* Teknoloji.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDC1C78420200599647 /* Teknoloji.png */; };
+		63529DE91C78420200599647 /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDB1C78420200599647 /* ice.png */; };
+		63529DEA1C78420200599647 /* tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDC1C78420200599647 /* tech.png */; };
 		63529DEB1C78420200599647 /* accessory_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDD1C78420200599647 /* accessory_2.jpg */; };
 		63529DEC1C78420200599647 /* baby_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDE1C78420200599647 /* baby_1.png */; };
 		63529DED1C78420200599647 /* drinks_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 63529DDF1C78420200599647 /* drinks_1.png */; };
@@ -134,6 +135,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		631FD0081C78AF14002361AA /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
+		631FD0091C78AF14002361AA /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 		63529DB91C7809C200599647 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		63529DBA1C7809C200599647 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		63529DBB1C7809C200599647 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -151,8 +154,8 @@
 		63529DD41C7814DA00599647 /* 762-shopping-bag-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "762-shopping-bag-toolbar.png"; sourceTree = "<group>"; };
 		63529DD51C7814DA00599647 /* 762-shopping-bag-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "762-shopping-bag-toolbar@2x.png"; sourceTree = "<group>"; };
 		63529DD61C7814DA00599647 /* 762-shopping-bag-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "762-shopping-bag-toolbar@3x.png"; sourceTree = "<group>"; };
-		63529DDB1C78420200599647 /* dondurma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dondurma.png; sourceTree = "<group>"; };
-		63529DDC1C78420200599647 /* Teknoloji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Teknoloji.png; sourceTree = "<group>"; };
+		63529DDB1C78420200599647 /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
+		63529DDC1C78420200599647 /* tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tech.png; sourceTree = "<group>"; };
 		63529DDD1C78420200599647 /* accessory_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = accessory_2.jpg; sourceTree = "<group>"; };
 		63529DDE1C78420200599647 /* baby_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby_1.png; sourceTree = "<group>"; };
 		63529DDF1C78420200599647 /* drinks_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drinks_1.png; sourceTree = "<group>"; };
@@ -397,8 +400,8 @@
 			isa = PBXGroup;
 			children = (
 				63529DF71C78425000599647 /* oyun.jpg */,
-				63529DDB1C78420200599647 /* dondurma.png */,
-				63529DDC1C78420200599647 /* Teknoloji.png */,
+				63529DDB1C78420200599647 /* ice.png */,
+				63529DDC1C78420200599647 /* tech.png */,
 				63529DDD1C78420200599647 /* accessory_2.jpg */,
 				63529DDE1C78420200599647 /* baby_1.png */,
 				63529DDF1C78420200599647 /* drinks_1.png */,
@@ -440,6 +443,8 @@
 			children = (
 				638D3CA21C77BD8F004F9CA2 /* AppDelegate.h */,
 				638D3CA31C77BD8F004F9CA2 /* AppDelegate.m */,
+				631FD0081C78AF14002361AA /* UITextField+Shake.h */,
+				631FD0091C78AF14002361AA /* UITextField+Shake.m */,
 				63529DB81C7809C200599647 /* RESideMenu */,
 				638D3DC01C780463004F9CA2 /* UICKeyChainStore */,
 				638D3D741C77F5C2004F9CA2 /* RZTransitions */,
@@ -861,13 +866,13 @@
 				63529DD71C7814DA00599647 /* 762-shopping-bag-toolbar.png in Resources */,
 				63529DCB1C780D1D00599647 /* icons-red.png in Resources */,
 				63529DD31C7810ED00599647 /* 1180-align-justify-toolbar@3x.png in Resources */,
-				63529DEA1C78420200599647 /* Teknoloji.png in Resources */,
+				63529DEA1C78420200599647 /* tech.png in Resources */,
 				63529DF21C78420200599647 /* new_products_tr.jpg in Resources */,
 				638D3CAF1C77BD8F004F9CA2 /* LaunchScreen.storyboard in Resources */,
 				63529DF11C78420200599647 /* misc_1.png in Resources */,
 				63529DF41C78420200599647 /* pet_2.png in Resources */,
 				63529DF61C78420200599647 /* snacks_1.png in Resources */,
-				63529DE91C78420200599647 /* dondurma.png in Resources */,
+				63529DE91C78420200599647 /* ice.png in Resources */,
 				63529DD81C7814DA00599647 /* 762-shopping-bag-toolbar@2x.png in Resources */,
 				63529DEF1C78420200599647 /* house_1.png in Resources */,
 				63529DEC1C78420200599647 /* baby_1.png in Resources */,
@@ -973,6 +978,7 @@
 				638D3D6E1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m in Sources */,
 				638D3DA91C77F5C2004F9CA2 /* RZBaseSwipeInteractionController.m in Sources */,
 				638D3D121C77CA43004F9CA2 /* UIRefreshControl+AFNetworking.m in Sources */,
+				631FD00A1C78AF14002361AA /* UITextField+Shake.m in Sources */,
 				638D3D231C77CD8F004F9CA2 /* OKHomeViewController.m in Sources */,
 				638D3DAB1C77F5C2004F9CA2 /* RZOverscrollInteractionController.m in Sources */,
 				638D3D1D1C77CD5C004F9CA2 /* OKLoginViewController.m in Sources */,

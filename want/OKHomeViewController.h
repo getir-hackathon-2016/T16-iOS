@@ -16,7 +16,7 @@
     BOOL willPresentAuthView;
     BOOL firstLocationUpdate_;
     CLLocationCoordinate2D storedLocation;
-    NSMutableArray *productCategories;
+    NSArray *productCategories;
 }
 
 

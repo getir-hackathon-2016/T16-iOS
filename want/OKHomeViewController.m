@@ -13,6 +13,8 @@
 #import "RESideMenu.h"
 #import "OKCategoryCollectionViewCell.h"
 #import "OKProductListViewController.h"
+#import "OKConsulate.h"
+#import "OKProductCategory.h"
 
 #define TABLE_VIEW_HEIGHT self.view.frame.size.height
 #define SCREEN_WIDTH self.view.frame.size.width
@@ -26,11 +28,13 @@
     [self.view setBackgroundColor:[UIColor flatRedColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
-    
+    [[RZTransitionsManager shared] setDefaultPushPopAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
     [[RZTransitionsManager shared] setAnimationController:[[RZZoomAlphaAnimationController alloc] init]
                                        fromViewController:[self class]
                                                 forAction:RZTransitionAction_Present];
-    
+    [[RZTransitionsManager shared] setAnimationController:[[RZZoomAlphaAnimationController alloc] init]
+                                       fromViewController:[self class]
+                                                forAction:RZTransitionAction_Push];
     
     [self setTransitioningDelegate:[RZTransitionsManager shared]];
     
@@ -48,6 +52,11 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     [self.collectionView setShowsVerticalScrollIndicator:NO];
+    
+    [OKConsulate fetchProductCategoriesWithCompletionBlock:^(BOOL succeeded, NSError *error, NSArray *result) {
+        productCategories = result;
+        [self.collectionView reloadData];
+    }];
     
     [super viewDidLoad];
 }
@@ -251,7 +260,7 @@
     if (section == 0) {
         return 0;
     }else{
-        return 15;
+        return productCategories.count;
     }
 }
 
@@ -260,9 +269,11 @@
 {
     OKCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     
+    OKProductCategory *category = [productCategories objectAtIndex:indexPath.row];
+    
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [UIImage imageNamed:@"oyun.jpg"];
-    cell.titleLabel.text = @"Oyun";
+    cell.imageView.image = [UIImage imageNamed:category.categoryImageURL];
+    cell.titleLabel.text = category.categoryName;
     
     return cell;
 }
@@ -343,6 +354,8 @@
 {
     OKProductListViewController *productList = [[OKProductListViewController alloc] init];
     productList.categoryId = 1;
+    [productList setTransitioningDelegate:[RZTransitionsManager shared]];
+
     [self.navigationController pushViewController:productList animated:YES];
 }
 
