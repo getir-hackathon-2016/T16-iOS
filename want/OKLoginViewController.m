@@ -10,6 +10,7 @@
 #import "UIView+AutoLayout.h"
 #import "Chameleon.h"
 #import "OKUser.h"
+#import "OKConsulate.h"
 
 @implementation OKLoginViewController
 
@@ -165,10 +166,18 @@
 
 - (void) doLogin
 {
-    OKUser *currentUser = [OKUser currentUser];
-    currentUser.userId = 1;
+    [OKConsulate loginUserWithUsername:usernameTextField.text andPassword:usernameTextField.text withCompletionBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"%@:%@",succeeded?@"Success:":@"Error:",error.description);
+        
+        if (succeeded) {
+            OKUser *currentUser = [OKUser currentUser];
+            currentUser.userId = 1;
+            
+            [self.delegate loginFinished];
+        }
+    }];
     
-    [self.delegate loginFinished];
+    
 }
 
 @end

@@ -16,11 +16,10 @@
 + (BOOL) loginUserWithUsername: (NSString *) username andPassword: (NSString *) password withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock
 {
     
-    NSURL *URL = [NSURL URLWithString:@"/user/login"];
-    
+    NSURL *URL = [NSURL URLWithString:@"/login"];
+        
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseAPIUrl]];
     
-    [manager.requestSerializer setValue:@"vZu-YUFWLzIdFIn7VDoA6hV9IhrYe-BimkC1ncRdojU" forHTTPHeaderField:@"X-CSRF-Token"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     NSDictionary *params = @ {@"username":username, @"password":password};

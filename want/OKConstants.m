@@ -10,7 +10,7 @@
 
 @implementation OKConstants
 
-NSString* const kBaseAPIUrl = @"http://t16.com/api";
+NSString* const kBaseAPIUrl = @"http://qeremy.com:3000";
 
 int const kCartStatusNew = 0;
 int const kCartStatusOrdered = 1;
