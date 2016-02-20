@@ -48,6 +48,22 @@
 		638D3D351C77CDE8004F9CA2 /* OKAddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */; };
 		638D3D381C77CE14004F9CA2 /* OKUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */; };
 		638D3D3E1C77D099004F9CA2 /* OKConsulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D3D1C77D099004F9CA2 /* OKConsulate.m */; };
+		638D3D461C77DDBB004F9CA2 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D411C77DDBB004F9CA2 /* JVFloatLabeledTextField.m */; };
+		638D3D471C77DDBB004F9CA2 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D431C77DDBB004F9CA2 /* JVFloatLabeledTextView.m */; };
+		638D3D481C77DDBB004F9CA2 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D451C77DDBB004F9CA2 /* NSString+TextDirectionality.m */; };
+		638D3D4B1C77E96E004F9CA2 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D4A1C77E96E004F9CA2 /* UIView+AutoLayout.m */; };
+		638D3D681C77EE58004F9CA2 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D4F1C77EE58004F9CA2 /* Chameleon_.m */; };
+		638D3D691C77EE58004F9CA2 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D511C77EE58004F9CA2 /* ChameleonConstants.m */; };
+		638D3D6A1C77EE58004F9CA2 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D551C77EE58004F9CA2 /* NSArray+Chameleon.m */; };
+		638D3D6B1C77EE58004F9CA2 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D571C77EE58004F9CA2 /* UIAppearance+Swift.m */; };
+		638D3D6C1C77EE58004F9CA2 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D591C77EE58004F9CA2 /* UIButton+Chameleon.m */; };
+		638D3D6D1C77EE58004F9CA2 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D5B1C77EE58004F9CA2 /* UIColor+Chameleon.m */; };
+		638D3D6E1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D5D1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m */; };
+		638D3D6F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D5F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m */; };
+		638D3D701C77EE58004F9CA2 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D611C77EE58004F9CA2 /* UILabel+Chameleon.m */; };
+		638D3D711C77EE58004F9CA2 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D631C77EE58004F9CA2 /* UINavigationController+Chameleon.m */; };
+		638D3D721C77EE58004F9CA2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D651C77EE58004F9CA2 /* UIView+ChameleonPrivate.m */; };
+		638D3D731C77EE58004F9CA2 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D671C77EE58004F9CA2 /* UIViewController+Chameleon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +169,41 @@
 		638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKUserProfileViewController.m; sourceTree = "<group>"; };
 		638D3D3C1C77D099004F9CA2 /* OKConsulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKConsulate.h; sourceTree = "<group>"; };
 		638D3D3D1C77D099004F9CA2 /* OKConsulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKConsulate.m; sourceTree = "<group>"; };
+		638D3D401C77DDBB004F9CA2 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		638D3D411C77DDBB004F9CA2 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		638D3D421C77DDBB004F9CA2 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		638D3D431C77DDBB004F9CA2 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		638D3D441C77DDBB004F9CA2 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		638D3D451C77DDBB004F9CA2 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		638D3D491C77E96E004F9CA2 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		638D3D4A1C77E96E004F9CA2 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		638D3D4D1C77EE58004F9CA2 /* Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon.h; sourceTree = "<group>"; };
+		638D3D4E1C77EE58004F9CA2 /* Chameleon_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chameleon_.h; sourceTree = "<group>"; };
+		638D3D4F1C77EE58004F9CA2 /* Chameleon_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chameleon_.m; sourceTree = "<group>"; };
+		638D3D501C77EE58004F9CA2 /* ChameleonConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonConstants.h; sourceTree = "<group>"; };
+		638D3D511C77EE58004F9CA2 /* ChameleonConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChameleonConstants.m; sourceTree = "<group>"; };
+		638D3D521C77EE58004F9CA2 /* ChameleonEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonEnums.h; sourceTree = "<group>"; };
+		638D3D531C77EE58004F9CA2 /* ChameleonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChameleonMacros.h; sourceTree = "<group>"; };
+		638D3D541C77EE58004F9CA2 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D551C77EE58004F9CA2 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		638D3D561C77EE58004F9CA2 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		638D3D571C77EE58004F9CA2 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		638D3D581C77EE58004F9CA2 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D591C77EE58004F9CA2 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		638D3D5A1C77EE58004F9CA2 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D5B1C77EE58004F9CA2 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		638D3D5C1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		638D3D5D1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		638D3D5E1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		638D3D5F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		638D3D601C77EE58004F9CA2 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D611C77EE58004F9CA2 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		638D3D621C77EE58004F9CA2 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D631C77EE58004F9CA2 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		638D3D641C77EE58004F9CA2 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		638D3D651C77EE58004F9CA2 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		638D3D661C77EE58004F9CA2 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		638D3D671C77EE58004F9CA2 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,12 +256,16 @@
 			children = (
 				638D3CA21C77BD8F004F9CA2 /* AppDelegate.h */,
 				638D3CA31C77BD8F004F9CA2 /* AppDelegate.m */,
+				638D3D4C1C77EE58004F9CA2 /* Chameleon */,
+				638D3D3F1C77DDBB004F9CA2 /* JVFloatLabeledTextField */,
 				638D3CE21C77CA43004F9CA2 /* AFNetworking */,
 				638D3CF01C77CA43004F9CA2 /* UIKit+AFNetworking */,
 				638D3CD51C77BE59004F9CA2 /* Models */,
 				638D3D1A1C77CD17004F9CA2 /* View Controllers */,
 				638D3CA51C77BD8F004F9CA2 /* ViewController.h */,
 				638D3CA61C77BD8F004F9CA2 /* ViewController.m */,
+				638D3D491C77E96E004F9CA2 /* UIView+AutoLayout.h */,
+				638D3D4A1C77E96E004F9CA2 /* UIView+AutoLayout.m */,
 				638D3D3C1C77D099004F9CA2 /* OKConsulate.h */,
 				638D3D3D1C77D099004F9CA2 /* OKConsulate.m */,
 				638D3CA81C77BD8F004F9CA2 /* Main.storyboard */,
@@ -341,6 +396,53 @@
 				638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		638D3D3F1C77DDBB004F9CA2 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				638D3D401C77DDBB004F9CA2 /* JVFloatLabeledTextField.h */,
+				638D3D411C77DDBB004F9CA2 /* JVFloatLabeledTextField.m */,
+				638D3D421C77DDBB004F9CA2 /* JVFloatLabeledTextView.h */,
+				638D3D431C77DDBB004F9CA2 /* JVFloatLabeledTextView.m */,
+				638D3D441C77DDBB004F9CA2 /* NSString+TextDirectionality.h */,
+				638D3D451C77DDBB004F9CA2 /* NSString+TextDirectionality.m */,
+			);
+			path = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		638D3D4C1C77EE58004F9CA2 /* Chameleon */ = {
+			isa = PBXGroup;
+			children = (
+				638D3D4D1C77EE58004F9CA2 /* Chameleon.h */,
+				638D3D4E1C77EE58004F9CA2 /* Chameleon_.h */,
+				638D3D4F1C77EE58004F9CA2 /* Chameleon_.m */,
+				638D3D501C77EE58004F9CA2 /* ChameleonConstants.h */,
+				638D3D511C77EE58004F9CA2 /* ChameleonConstants.m */,
+				638D3D521C77EE58004F9CA2 /* ChameleonEnums.h */,
+				638D3D531C77EE58004F9CA2 /* ChameleonMacros.h */,
+				638D3D541C77EE58004F9CA2 /* NSArray+Chameleon.h */,
+				638D3D551C77EE58004F9CA2 /* NSArray+Chameleon.m */,
+				638D3D561C77EE58004F9CA2 /* UIAppearance+Swift.h */,
+				638D3D571C77EE58004F9CA2 /* UIAppearance+Swift.m */,
+				638D3D581C77EE58004F9CA2 /* UIButton+Chameleon.h */,
+				638D3D591C77EE58004F9CA2 /* UIButton+Chameleon.m */,
+				638D3D5A1C77EE58004F9CA2 /* UIColor+Chameleon.h */,
+				638D3D5B1C77EE58004F9CA2 /* UIColor+Chameleon.m */,
+				638D3D5C1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.h */,
+				638D3D5D1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m */,
+				638D3D5E1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.h */,
+				638D3D5F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m */,
+				638D3D601C77EE58004F9CA2 /* UILabel+Chameleon.h */,
+				638D3D611C77EE58004F9CA2 /* UILabel+Chameleon.m */,
+				638D3D621C77EE58004F9CA2 /* UINavigationController+Chameleon.h */,
+				638D3D631C77EE58004F9CA2 /* UINavigationController+Chameleon.m */,
+				638D3D641C77EE58004F9CA2 /* UIView+ChameleonPrivate.h */,
+				638D3D651C77EE58004F9CA2 /* UIView+ChameleonPrivate.m */,
+				638D3D661C77EE58004F9CA2 /* UIViewController+Chameleon.h */,
+				638D3D671C77EE58004F9CA2 /* UIViewController+Chameleon.m */,
+			);
+			path = Chameleon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,12 +580,19 @@
 				638D3CA71C77BD8F004F9CA2 /* ViewController.m in Sources */,
 				638D3CA41C77BD8F004F9CA2 /* AppDelegate.m in Sources */,
 				638D3D061C77CA43004F9CA2 /* AFNetworkReachabilityManager.m in Sources */,
+				638D3D481C77DDBB004F9CA2 /* NSString+TextDirectionality.m in Sources */,
+				638D3D691C77EE58004F9CA2 /* ChameleonConstants.m in Sources */,
 				638D3D2F1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m in Sources */,
+				638D3D721C77EE58004F9CA2 /* UIView+ChameleonPrivate.m in Sources */,
+				638D3D6F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m in Sources */,
 				638D3D0A1C77CA43004F9CA2 /* AFURLSessionManager.m in Sources */,
 				638D3D081C77CA43004F9CA2 /* AFURLRequestSerialization.m in Sources */,
 				638D3D351C77CDE8004F9CA2 /* OKAddCreditCardViewController.m in Sources */,
+				638D3D711C77EE58004F9CA2 /* UINavigationController+Chameleon.m in Sources */,
 				638D3D0E1C77CA43004F9CA2 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				638D3D201C77CD78004F9CA2 /* OKRegisterViewController.m in Sources */,
+				638D3D701C77EE58004F9CA2 /* UILabel+Chameleon.m in Sources */,
+				638D3D6B1C77EE58004F9CA2 /* UIAppearance+Swift.m in Sources */,
 				638D3D161C77CAB2004F9CA2 /* OKCard.m in Sources */,
 				638D3D191C77CB3D004F9CA2 /* OKAddress.m in Sources */,
 				638D3D2C1C77CDBC004F9CA2 /* OKConfirmOrderViewController.m in Sources */,
@@ -495,14 +604,23 @@
 				638D3D0F1C77CA43004F9CA2 /* UIButton+AFNetworking.m in Sources */,
 				638D3D101C77CA43004F9CA2 /* UIImageView+AFNetworking.m in Sources */,
 				638D3D091C77CA43004F9CA2 /* AFURLResponseSerialization.m in Sources */,
+				638D3D471C77DDBB004F9CA2 /* JVFloatLabeledTextView.m in Sources */,
+				638D3D6D1C77EE58004F9CA2 /* UIColor+Chameleon.m in Sources */,
+				638D3D731C77EE58004F9CA2 /* UIViewController+Chameleon.m in Sources */,
 				638D3D051C77CA43004F9CA2 /* AFHTTPSessionManager.m in Sources */,
+				638D3D4B1C77E96E004F9CA2 /* UIView+AutoLayout.m in Sources */,
 				638D3D291C77CDA7004F9CA2 /* OKCartViewController.m in Sources */,
 				638D3D261C77CD9F004F9CA2 /* OKProductListViewController.m in Sources */,
 				638D3CA11C77BD8F004F9CA2 /* main.m in Sources */,
 				638D3D131C77CA43004F9CA2 /* UIWebView+AFNetworking.m in Sources */,
 				638D3CDB1C77C10D004F9CA2 /* OKUser.m in Sources */,
+				638D3D681C77EE58004F9CA2 /* Chameleon_.m in Sources */,
+				638D3D6C1C77EE58004F9CA2 /* UIButton+Chameleon.m in Sources */,
 				638D3D321C77CDDB004F9CA2 /* OKOrderViewController.m in Sources */,
 				638D3CD41C77BE4F004F9CA2 /* OKProductCategory.m in Sources */,
+				638D3D6A1C77EE58004F9CA2 /* NSArray+Chameleon.m in Sources */,
+				638D3D461C77DDBB004F9CA2 /* JVFloatLabeledTextField.m in Sources */,
+				638D3D6E1C77EE58004F9CA2 /* UIColor+ChameleonPrivate.m in Sources */,
 				638D3D121C77CA43004F9CA2 /* UIRefreshControl+AFNetworking.m in Sources */,
 				638D3D231C77CD8F004F9CA2 /* OKHomeViewController.m in Sources */,
 				638D3D1D1C77CD5C004F9CA2 /* OKLoginViewController.m in Sources */,
