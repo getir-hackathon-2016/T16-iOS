@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OKLoginViewController.h"
 
-@interface OKHomeViewController : UIViewController
-
+@interface OKHomeViewController : UIViewController <OKLoginViewControllerDelegate>
+{
+    BOOL willPresentAuthView;
+}
 @end
