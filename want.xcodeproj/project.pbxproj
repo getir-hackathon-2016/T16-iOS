@@ -151,6 +151,15 @@
 		631FD22E1C79A44C002361AA /* 851-calendar-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD22B1C79A44C002361AA /* 851-calendar-toolbar.png */; };
 		631FD22F1C79A44C002361AA /* 851-calendar-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD22C1C79A44C002361AA /* 851-calendar-toolbar@2x.png */; };
 		631FD2301C79A44C002361AA /* 851-calendar-toolbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD22D1C79A44C002361AA /* 851-calendar-toolbar@3x.png */; };
+		631FD2341C79AC96002361AA /* path.nmea in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2311C79AC96002361AA /* path.nmea */; };
+		631FD2351C79AC96002361AA /* symbol-moving-annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2321C79AC96002361AA /* symbol-moving-annotation.png */; };
+		631FD2361C79AC96002361AA /* symbol-moving-annotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2331C79AC96002361AA /* symbol-moving-annotation@2x.png */; };
+		631FD2411C79ACB1002361AA /* HGMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2381C79ACB1002361AA /* HGMapPath.m */; };
+		631FD2421C79ACB1002361AA /* HGMovingAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */; };
+		631FD2431C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */; };
+		631FD2441C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */; };
+		631FD2451C79ACB1002361AA /* HGMovingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2401C79ACB1002361AA /* HGMovingAnnotationView.m */; };
+		631FD2471C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2461C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib */; };
 		63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBA1C7809C200599647 /* RECommonFunctions.m */; };
 		63529DC01C7809C200599647 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBC1C7809C200599647 /* RESideMenu.m */; };
 		63529DC11C7809C200599647 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */; };
@@ -425,6 +434,20 @@
 		631FD22B1C79A44C002361AA /* 851-calendar-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "851-calendar-toolbar.png"; sourceTree = "<group>"; };
 		631FD22C1C79A44C002361AA /* 851-calendar-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "851-calendar-toolbar@2x.png"; sourceTree = "<group>"; };
 		631FD22D1C79A44C002361AA /* 851-calendar-toolbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "851-calendar-toolbar@3x.png"; sourceTree = "<group>"; };
+		631FD2311C79AC96002361AA /* path.nmea */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = path.nmea; sourceTree = "<group>"; };
+		631FD2321C79AC96002361AA /* symbol-moving-annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "symbol-moving-annotation.png"; sourceTree = "<group>"; };
+		631FD2331C79AC96002361AA /* symbol-moving-annotation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "symbol-moving-annotation@2x.png"; sourceTree = "<group>"; };
+		631FD2371C79ACB1002361AA /* HGMapPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMapPath.h; sourceTree = "<group>"; };
+		631FD2381C79ACB1002361AA /* HGMapPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMapPath.m; sourceTree = "<group>"; };
+		631FD2391C79ACB1002361AA /* HGMovingAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotation.h; sourceTree = "<group>"; };
+		631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotation.m; sourceTree = "<group>"; };
+		631FD23B1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationSampleAppDelegate.h; sourceTree = "<group>"; };
+		631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationSampleAppDelegate.m; sourceTree = "<group>"; };
+		631FD23D1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationSampleViewController.h; sourceTree = "<group>"; };
+		631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationSampleViewController.m; sourceTree = "<group>"; };
+		631FD23F1C79ACB1002361AA /* HGMovingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationView.h; sourceTree = "<group>"; };
+		631FD2401C79ACB1002361AA /* HGMovingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationView.m; sourceTree = "<group>"; };
+		631FD2461C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HGMovingAnnotationSampleViewController.xib; sourceTree = "<group>"; };
 		63529DB91C7809C200599647 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		63529DBA1C7809C200599647 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		63529DBB1C7809C200599647 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -806,6 +829,9 @@
 		63529DC51C780C7D00599647 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				631FD2311C79AC96002361AA /* path.nmea */,
+				631FD2321C79AC96002361AA /* symbol-moving-annotation.png */,
+				631FD2331C79AC96002361AA /* symbol-moving-annotation@2x.png */,
 				631FD00B1C78CDA2002361AA /* Product Images */,
 				63529DDA1C7841EE00599647 /* Category Images */,
 				63529DD41C7814DA00599647 /* 762-shopping-bag-toolbar.png */,
@@ -1034,6 +1060,17 @@
 				638D3D311C77CDDB004F9CA2 /* OKOrderViewController.m */,
 				638D3D331C77CDE8004F9CA2 /* OKAddCreditCardViewController.h */,
 				638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */,
+				631FD2371C79ACB1002361AA /* HGMapPath.h */,
+				631FD2381C79ACB1002361AA /* HGMapPath.m */,
+				631FD2391C79ACB1002361AA /* HGMovingAnnotation.h */,
+				631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */,
+				631FD23B1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.h */,
+				631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */,
+				631FD23D1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.h */,
+				631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */,
+				631FD23F1C79ACB1002361AA /* HGMovingAnnotationView.h */,
+				631FD2401C79ACB1002361AA /* HGMovingAnnotationView.m */,
+				631FD2461C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -1402,12 +1439,15 @@
 				631FD1F71C798CED002361AA /* product-96.jpeg in Resources */,
 				638D3CAF1C77BD8F004F9CA2 /* LaunchScreen.storyboard in Resources */,
 				631FD1B21C798CED002361AA /* product-27.png in Resources */,
+				631FD2341C79AC96002361AA /* path.nmea in Resources */,
+				631FD2361C79AC96002361AA /* symbol-moving-annotation@2x.png in Resources */,
 				631FD1E21C798CED002361AA /* product-75.jpeg in Resources */,
 				631FD1B71C798CED002361AA /* product-32.png in Resources */,
 				63529DF11C78420200599647 /* misc_1.png in Resources */,
 				631FD2161C798CED002361AA /* product-127.jpeg in Resources */,
 				63529DF41C78420200599647 /* pet_2.png in Resources */,
 				631FD1C71C798CED002361AA /* product-48.jpeg in Resources */,
+				631FD2471C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib in Resources */,
 				631FD1BE1C798CED002361AA /* product-39.png in Resources */,
 				631FD1B11C798CED002361AA /* product-26.png in Resources */,
 				631FD1E41C798CED002361AA /* product-77.jpeg in Resources */,
@@ -1425,6 +1465,7 @@
 				631FD1CF1C798CED002361AA /* product-56.jpeg in Resources */,
 				631FD1FF1C798CED002361AA /* product-104.jpeg in Resources */,
 				631FD2111C798CED002361AA /* product-122.jpeg in Resources */,
+				631FD2351C79AC96002361AA /* symbol-moving-annotation.png in Resources */,
 				631FD1CA1C798CED002361AA /* product-51.jpeg in Resources */,
 				631FD1EB1C798CED002361AA /* product-84.jpeg in Resources */,
 				63529DD81C7814DA00599647 /* 762-shopping-bag-toolbar@2x.png in Resources */,
@@ -1507,6 +1548,7 @@
 				638D3D0A1C77CA43004F9CA2 /* AFURLSessionManager.m in Sources */,
 				638D3D081C77CA43004F9CA2 /* AFURLRequestSerialization.m in Sources */,
 				638D3DB51C77F5C2004F9CA2 /* RZZoomBlurAnimationController.m in Sources */,
+				631FD2441C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m in Sources */,
 				638D3D351C77CDE8004F9CA2 /* OKAddCreditCardViewController.m in Sources */,
 				638D3D711C77EE58004F9CA2 /* UINavigationController+Chameleon.m in Sources */,
 				638D3DB61C77F5C2004F9CA2 /* RZZoomPushAnimationController.m in Sources */,
@@ -1525,13 +1567,16 @@
 				638D3DB81C77F5C2004F9CA2 /* UIImage+RZTransitionsFastImageBlur.m in Sources */,
 				638D3DAF1C77F5C2004F9CA2 /* RZCardSlideAnimationController.m in Sources */,
 				638D3D0D1C77CA43004F9CA2 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				631FD2451C79ACB1002361AA /* HGMovingAnnotationView.m in Sources */,
 				63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */,
 				638D3D0C1C77CA43004F9CA2 /* AFImageDownloader.m in Sources */,
 				638D3DAC1C77F5C2004F9CA2 /* RZPinchInteractionController.m in Sources */,
 				638D3DB71C77F5C2004F9CA2 /* NSObject+RZTransitionsViewHelpers.m in Sources */,
 				638D3D0F1C77CA43004F9CA2 /* UIButton+AFNetworking.m in Sources */,
 				638D3D101C77CA43004F9CA2 /* UIImageView+AFNetworking.m in Sources */,
+				631FD2421C79ACB1002361AA /* HGMovingAnnotation.m in Sources */,
 				638D3D091C77CA43004F9CA2 /* AFURLResponseSerialization.m in Sources */,
+				631FD2411C79ACB1002361AA /* HGMapPath.m in Sources */,
 				638D3DB11C77F5C2004F9CA2 /* RZRectZoomAnimationController.m in Sources */,
 				63529DC01C7809C200599647 /* RESideMenu.m in Sources */,
 				638D3D471C77DDBB004F9CA2 /* JVFloatLabeledTextView.m in Sources */,
@@ -1554,6 +1599,7 @@
 				638D3DB91C77F5C2004F9CA2 /* UIImage+RZTransitionsSnapshotHelpers.m in Sources */,
 				638D3D6C1C77EE58004F9CA2 /* UIButton+Chameleon.m in Sources */,
 				638D3D321C77CDDB004F9CA2 /* OKOrderViewController.m in Sources */,
+				631FD2431C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m in Sources */,
 				638D3DBF1C7802E4004F9CA2 /* OKMainNavigationController.m in Sources */,
 				638D3DB21C77F5C2004F9CA2 /* RZSegmentControlMoveFadeAnimationController.m in Sources */,
 				638D3CD41C77BE4F004F9CA2 /* OKProductCategory.m in Sources */,
