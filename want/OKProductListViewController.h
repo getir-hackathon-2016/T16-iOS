@@ -11,6 +11,7 @@
 @interface OKProductListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *products;
+    UIBarButtonItem *cartButton;
 }
 @property (nonatomic) NSString *categoryId;
 @property (nonatomic,retain) UITableView *tableView;

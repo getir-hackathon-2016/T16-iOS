@@ -10,6 +10,9 @@
 #import "OKConsulate.h"
 #import "OKProduct.h"
 #import "UIView+AutoLayout.h"
+#import "Chameleon.h"
+#import "UIBarButtonItem+Badge.h"
+#import "UIButton+Badge.h"
 
 @implementation OKProductListViewController
 
@@ -21,6 +24,24 @@
         [self.tableView reloadData];
     }];
     
+    UIImage *image = [[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0,0,image.size.width, image.size.height);
+    [button addTarget:self action:@selector(showCart:) forControlEvents:UIControlEventTouchDown];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    
+    // Make BarButton Item
+    cartButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    //cartButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self action:@selector(showCart)];
+    
+    
+    self.navigationItem.rightBarButtonItem = cartButton;
+    self.navigationItem.rightBarButtonItem.shouldAnimateBadge = YES;
+    self.navigationItem.rightBarButtonItem.shouldHideBadgeAtZero = YES;
+    self.navigationItem.rightBarButtonItem.badgeValue = @"0";
+    self.navigationItem.rightBarButtonItem.badgeBGColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatRedColor];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
@@ -58,12 +79,24 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:MyIdentifier] ;
+        
+        UIButton *addToCartButton = [[UIButton alloc] initWithFrame:CGRectMake(self.tableView.frame.size.width - 60, 25, 50, 30)];
+        
+        [addToCartButton addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [addToCartButton setTitle:NSLocalizedString(@"Buy", @"Buy") forState:UIControlStateNormal];
+        [addToCartButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+        [addToCartButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
+        [addToCartButton.layer setCornerRadius:2];
+        [addToCartButton.layer setBorderWidth:1];
+        [cell addSubview:addToCartButton];
+
     }
     
     // Here we use the provided setImageWithURL: method to load the web image
     // Ensure you use a placeholder image otherwise cells will be initialized with no image
     OKProduct *product = [products objectAtIndex:indexPath.row];
-    [cell.imageView setImage:[UIImage imageNamed:@"55a0219335a77b0c0075d122.jpeg"]];
+    [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"product-%i.jpeg",arc4random_uniform(128) + 1]]];
     cell.textLabel.text = product.productName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@$",product.productPriceValue];
     return cell;
@@ -80,5 +113,11 @@
         
 }
 
+- (void) addToCart: (UIButton *)sender
+{
+    int value = self.navigationItem.rightBarButtonItem.badgeValue.intValue;
+    value ++;
+    self.navigationItem.rightBarButtonItem.badgeValue = [NSString stringWithFormat:@"%i",value];
+}
 
 @end
