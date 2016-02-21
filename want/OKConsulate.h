@@ -21,7 +21,7 @@
 + (NSDictionary *) fetchProductCategoriesWithCompletionBlock: (void (^)(BOOL succeeded, NSError *error, NSArray *result))completionBlock;
 
 + (NSArray *) fetchAllProductsAndSkip: (int)skip withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
-+ (NSArray *) fetchProductsWithCategory:(int)categoryId withCompletionBlock: (int)skip withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
++ (NSArray *) fetchProductsWithCategory:(NSString *)categoryId skip: (int)skip withCompletionBlock: (void (^)(BOOL succeeded, NSError *error, NSArray *result))completionBlock;
 
 + (BOOL) addProductToCart:(int)productId withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;
 + (BOOL) incrementProductInCart:(int)productId withCompletionBlock: (void (^)(BOOL succeeded, NSError *error))completionBlock;

@@ -28,13 +28,10 @@
     [self.view setBackgroundColor:[UIColor flatRedColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
-    [[RZTransitionsManager shared] setDefaultPushPopAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
+
     [[RZTransitionsManager shared] setAnimationController:[[RZZoomAlphaAnimationController alloc] init]
                                        fromViewController:[self class]
                                                 forAction:RZTransitionAction_Present];
-    [[RZTransitionsManager shared] setAnimationController:[[RZZoomAlphaAnimationController alloc] init]
-                                       fromViewController:[self class]
-                                                forAction:RZTransitionAction_Push];
     
     [self setTransitioningDelegate:[RZTransitionsManager shared]];
     
@@ -334,7 +331,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(collectionView.frame.size.width/3 - 0.4, collectionView.frame.size.width/3 - 0.4);
+    return CGSizeMake(self.view.bounds.size.width/3 - 0.4, self.view.bounds.size.width/3 - 0.4);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -346,6 +343,7 @@
     
     return 0.2;
 }
+
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0.2;
 }
@@ -353,8 +351,8 @@
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     OKProductListViewController *productList = [[OKProductListViewController alloc] init];
-    productList.categoryId = 1;
-    [productList setTransitioningDelegate:[RZTransitionsManager shared]];
+    OKProductCategory *category = [productCategories objectAtIndex:indexPath.row];
+    productList.categoryId = category.categoryId;
 
     [self.navigationController pushViewController:productList animated:YES];
 }

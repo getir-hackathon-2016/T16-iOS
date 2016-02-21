@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface OKProductListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
-@property (nonatomic) int categoryId;
+{
+    NSArray *products;
+}
+@property (nonatomic) NSString *categoryId;
 @property (nonatomic,retain) UITableView *tableView;
 @end

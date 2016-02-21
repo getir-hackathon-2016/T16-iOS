@@ -10,7 +10,7 @@
 
 @interface OKProduct : NSObject
 
-@property (nonatomic) int productId;
+@property (nonatomic,retain) NSString *productId;
 
 @property (nonatomic,retain) NSString *productName;
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface OKProductCategory : NSObject
-@property (nonatomic) int categoryId;
+@property (nonatomic) NSString* categoryId;
 @property (nonatomic,retain) NSString *categoryName;
 @property (nonatomic,retain) NSString *categoryImageURL;
 @end
