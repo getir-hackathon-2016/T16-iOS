@@ -9,6 +9,8 @@
 #import "OKCartViewController.h"
 #import "OKProduct.h"
 #import "Chameleon.h"
+#import "OKConfirmOrderViewController.h"
+#import "RESideMenu.h"
 
 @implementation OKCartViewController
 - (void) viewDidLoad
@@ -34,8 +36,8 @@
     
 
     orderButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, self.view.frame.size.width, 50)];
-    [orderButton setBackgroundColor:[UIColor flatRedColor]];
-    [orderButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [orderButton setBackgroundColor:[UIColor whiteColor]];
+    [orderButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
     [orderButton addTarget:self action:@selector(orderCart:) forControlEvents:UIControlEventTouchUpInside];
     [orderButton setTitle:[NSString stringWithFormat:@"Checkout ($%@)",cartTotal] forState:UIControlStateNormal];
     [self.view addSubview:orderButton];
@@ -69,15 +71,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;    //count of section
+    return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [[[OKCart currentCart] productsInCart] count];    //count number of row from counting array hear cataGorry is An Array
+    return [[[OKCart currentCart] productsInCart] count];
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -141,6 +142,16 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName: @"kCartUpdated" object:nil userInfo:nil];
 
+}
+
+- (void) orderCart: (UIButton *)sender
+{
+    OKConfirmOrderViewController *confirmOrderView = [[OKConfirmOrderViewController alloc] init];
+    UINavigationController *contentContoller = (UINavigationController *)self.sideMenuViewController.contentViewController;
+    [contentContoller pushViewController:confirmOrderView animated:YES];
+    
+    [self.sideMenuViewController hideMenuViewController];
+    
 }
 
 

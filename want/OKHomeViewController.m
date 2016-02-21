@@ -28,6 +28,9 @@
 
 - (void) viewDidLoad
 {
+    self.title = NSLocalizedString(@"Want", @"Want");
+
+    
     [self.view setBackgroundColor:[UIColor flatRedColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
@@ -377,6 +380,7 @@
     OKProductListViewController *productList = [[OKProductListViewController alloc] init];
     OKProductCategory *category = [productCategories objectAtIndex:indexPath.row];
     productList.categoryId = category.categoryId;
+    productList.title = category.categoryName;
 
     [self.navigationController pushViewController:productList animated:YES];
 }

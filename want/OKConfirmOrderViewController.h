@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OKConfirmOrderViewController : UIViewController
-
+@interface OKConfirmOrderViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,retain) NSString *cartId;
+@property (nonatomic,retain) UITableView *tableView;
 @end

@@ -171,9 +171,7 @@
                 OKProduct *product = [[OKProduct alloc] init];
 
                 product.productId = productObj[@"_id"];
-                product.productName = productObj[@"name"];
-                NSLog(@"Class:%@",[productObj[@"price"] class]);
-                
+                product.productName = productObj[@"name"];                
                 product.productPriceValue = [NSDecimalNumber decimalNumberWithDecimal:[productObj[@"price"] decimalValue]];
                 [enumeratedObjects addObject:product];
             }];
