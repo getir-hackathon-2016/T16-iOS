@@ -37,7 +37,7 @@
 
     orderButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height -50, self.view.frame.size.width, 50)];
     [orderButton setBackgroundColor:[UIColor whiteColor]];
-    [orderButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+    [orderButton setTitleColor:[UIColor flatWatermelonColor] forState:UIControlStateNormal];
     [orderButton addTarget:self action:@selector(orderCart:) forControlEvents:UIControlEventTouchUpInside];
     [orderButton setTitle:[NSString stringWithFormat:@"Checkout ($%@)",cartTotal] forState:UIControlStateNormal];
     [self.view addSubview:orderButton];

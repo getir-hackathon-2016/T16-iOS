@@ -39,9 +39,9 @@
     
     [usernameTextField setAutocorrectionType:UITextAutocorrectionTypeNo];
     
-    [usernameTextField setFloatingLabelTextColor:[UIColor flatRedColor]];
+    [usernameTextField setFloatingLabelTextColor:[UIColor flatWatermelonColor]];
     
-    [usernameTextField setTintColor:[UIColor flatRedColor]];
+    [usernameTextField setTintColor:[UIColor flatWatermelonColor]];
     
     [usernameTextField setTextColor:[UIColor whiteColor]];
     
@@ -62,9 +62,9 @@
     
     [passwordTextField setTextAlignment:NSTextAlignmentCenter];
 
-    [passwordTextField setFloatingLabelTextColor:[UIColor flatRedColor]];
+    [passwordTextField setFloatingLabelTextColor:[UIColor flatWatermelonColor]];
 
-    [passwordTextField setTintColor:[UIColor flatRedColor]];
+    [passwordTextField setTintColor:[UIColor flatWatermelonColor]];
     
     [passwordTextField setTextColor:[UIColor whiteColor]];
 
@@ -87,7 +87,7 @@
     
     [loginButton setTitle:NSLocalizedString(@"Login", @"Login") forState:UIControlStateNormal];
     
-    [loginButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
+    [loginButton.layer setBorderColor:[UIColor flatWatermelonColor].CGColor];
     
     [loginButton.layer setBorderWidth:1];
     
@@ -105,7 +105,7 @@
     
     [signupButton setTitle:NSLocalizedString(@"Signup", @"Signup") forState:UIControlStateNormal];
     
-    [signupButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
+    [signupButton.layer setBorderColor:[UIColor flatWatermelonColor].CGColor];
     
     [signupButton.layer setBorderWidth:1];
     
@@ -125,7 +125,7 @@
     
     [forgotPasswordButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
     
-    [forgotPasswordButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+    [forgotPasswordButton setTitleColor:[UIColor flatWatermelonColor] forState:UIControlStateNormal];
     
     [loginContainerView addSubview:forgotPasswordButton];
     

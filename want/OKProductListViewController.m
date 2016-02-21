@@ -39,7 +39,7 @@
     self.navigationItem.rightBarButtonItem.shouldHideBadgeAtZero = YES;
     self.navigationItem.rightBarButtonItem.badgeValue = @"0";
     self.navigationItem.rightBarButtonItem.badgeBGColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatRedColor];
+    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatWatermelonColor];
     
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     
@@ -88,14 +88,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:MyIdentifier] ;
         
+        
         UIButton *addToCartButton = [[UIButton alloc] initWithFrame:CGRectMake(self.tableView.frame.size.width - 60, 25, 50, 30)];
         
         [addToCartButton addTarget:self action:@selector(addToCart:) forControlEvents:UIControlEventTouchUpInside];
         
         [addToCartButton setTitle:NSLocalizedString(@"Buy", @"Buy") forState:UIControlStateNormal];
-        [addToCartButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+        [addToCartButton setTitleColor:[UIColor flatWatermelonColor] forState:UIControlStateNormal];
         [addToCartButton.titleLabel setFont:[UIFont systemFontOfSize:12 weight:UIFontWeightLight]];
-        [addToCartButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
+        [addToCartButton.layer setBorderColor:[UIColor flatWatermelonColor].CGColor];
         [addToCartButton.layer setCornerRadius:2];
         [addToCartButton.layer setBorderWidth:1];
         [cell addSubview:addToCartButton];
@@ -107,6 +108,7 @@
     // Ensure you use a placeholder image otherwise cells will be initialized with no image
     OKProduct *product = [products objectAtIndex:indexPath.row];
     [cell.imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"product-%i.jpeg",arc4random_uniform(128) + 1]]];
+        
     cell.textLabel.text = product.productName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@$",product.productPriceValue];
     return cell;

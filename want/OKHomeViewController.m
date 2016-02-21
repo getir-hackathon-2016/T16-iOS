@@ -31,7 +31,7 @@
     self.title = NSLocalizedString(@"Want", @"Want");
 
     
-    [self.view setBackgroundColor:[UIColor flatRedColor]];
+    [self.view setBackgroundColor:[UIColor flatWatermelonColor]];
     
     [[RZTransitionsManager shared] setDefaultPresentDismissAnimationController:[[RZZoomAlphaAnimationController alloc] init]];
 
@@ -60,7 +60,7 @@
     self.navigationItem.rightBarButtonItem.shouldHideBadgeAtZero = YES;
     self.navigationItem.rightBarButtonItem.badgeValue = @"0";
     self.navigationItem.rightBarButtonItem.badgeBGColor = [UIColor whiteColor];
-    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatRedColor];
+    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatWatermelonColor];
     
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
@@ -236,10 +236,39 @@
         [self.mapView setShowsUserLocation:YES];
         self.mapView.mapType = MKMapTypeStandard;
         self.mapView.showsPointsOfInterest = NO;
-        self.mapView.tintColor = [UIColor flatMintColor];
+        self.mapView.tintColor = [UIColor flatWatermelonColor];
         self.mapView.delegate = self;
         
         [view addSubview:self.mapView];
+        
+        //Location Button
+        UIButton *locationButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [locationButton setTitle:@"" forState:UIControlStateNormal];
+        [locationButton setFrame:CGRectMake(view.frame.size.width / 2 - 240 / 2, TABLE_VIEW_HEADER_HEIGHT / 2 - 30 / 2 - 40, 240, 30)];
+        [locationButton setBackgroundColor:[UIColor flatWatermelonColor]];
+        [locationButton.layer setCornerRadius:15];
+        [locationButton setTitle:NSLocalizedString(@"Set as delivery address", @"Set as delivery address") forState:UIControlStateNormal];
+        [locationButton.titleLabel setFont:[UIFont systemFontOfSize:13 weight:UIFontWeightLight]];
+        
+        UIImageView *disclosureImage = [[UIImageView alloc] initWithFrame:CGRectMake(230 - 16, 4, 22, 22)];
+        [disclosureImage setTintColor:[UIColor whiteColor]];
+        [disclosureImage setImage:[[UIImage imageNamed:@"right-arrow"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [locationButton addSubview:disclosureImage];
+        
+        UIView *circleView = [[UIView alloc] initWithFrame:CGRectMake(2, 2, 26, 26)];
+        [circleView setBackgroundColor:[UIColor whiteColor]];
+        [circleView.layer setCornerRadius:13];
+        
+        UILabel *minutes = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
+        [minutes setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightRegular]];
+        [minutes setTextAlignment:NSTextAlignmentCenter];
+        minutes.text = @"9'";
+        [minutes setTextColor:[UIColor flatWatermelonColor]];
+        [circleView addSubview:minutes];
+        
+        [locationButton addSubview:circleView];
+        
+        [view addSubview:locationButton];
         
         //Main Button
         UIButton *mainButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -265,12 +294,12 @@
         UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, SCREEN_WIDTH - 60, 15)];
         [headerLabel setFont:[UIFont systemFontOfSize:16 weight:UIFontWeightSemibold]];
         [headerLabel setText:NSLocalizedString(@"DELIVERY ADDRESS", @"DELIVERY ADDRESS")];
-        [headerLabel setTextColor:[UIColor flatRedColor]];
+        [headerLabel setTextColor:[UIColor flatWatermelonColor]];
         
         locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, SCREEN_WIDTH - 60, 20)];
         [locationLabel setFont:[UIFont systemFontOfSize:16 weight:UIFontWeightLight]];
         [locationLabel setText:NSLocalizedString(@"Locating your address", @"Locating your address")];
-        [locationLabel setTextColor:[UIColor flatRedColor]];
+        [locationLabel setTextColor:[UIColor flatWatermelonColor]];
         
         [mainButton addSubview:headerLabel];
         [mainButton addSubview:locationLabel];
@@ -362,11 +391,11 @@
         
         CALayer *bottomBorder = [CALayer layer];
         bottomBorder.frame = CGRectMake(0.0f, reusableview.frame.size.height - .4f, reusableview.frame.size.width, .4f);
-        bottomBorder.backgroundColor = [UIColor flatRedColor].CGColor;
+        bottomBorder.backgroundColor = [UIColor flatWatermelonColor].CGColor;
         [reusableview.layer addSublayer:bottomBorder];
         
         UILabel *categoriesLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 150, 40)];
-        [categoriesLabel setTextColor:[UIColor flatRedColor]];
+        [categoriesLabel setTextColor:[UIColor flatWatermelonColor]];
         [categoriesLabel setText:NSLocalizedString(@"Categories", @"Categories")];
         [categoriesLabel setFont:[UIFont systemFontOfSize:13 weight:UIFontWeightLight]];
         
@@ -374,7 +403,7 @@
         
         UILabel *estimatedDeliveryTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 90, 0, 80, 40)];
         [estimatedDeliveryTimeLabel setTextAlignment:NSTextAlignmentRight];
-        [estimatedDeliveryTimeLabel setTextColor:[UIColor flatRedColor]];
+        [estimatedDeliveryTimeLabel setTextColor:[UIColor flatWatermelonColor]];
         [estimatedDeliveryTimeLabel setText:@"9mn"];
         [estimatedDeliveryTimeLabel setFont:[UIFont systemFontOfSize:20 weight:UIFontWeightRegular]];
         

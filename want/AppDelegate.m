@@ -37,18 +37,18 @@
     [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],
      NSForegroundColorAttributeName, nil];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor flatRedColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
     [[UINavigationBar appearance] setTranslucent:YES];
     
     [[UIToolbar appearance] setTintColor:[UIColor flatWhiteColor]];
-    [[UIBarButtonItem appearance] setTintColor:[UIColor flatRedColor]];
+    [[UIBarButtonItem appearance] setTintColor:[UIColor flatWatermelonColor]];
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class],nil] setTintColor:[UIColor flatWhiteColor]];
     
     [[UITabBar appearance] setBarTintColor:[UIColor flatWhiteColor]];
-    [[UITabBar appearance] setTintColor:[UIColor flatRedColor]];
+    [[UITabBar appearance] setTintColor:[UIColor flatWatermelonColor]];
     
     [[UISegmentedControl appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor whiteColor]];
-    [[UISearchBar appearance] setBarTintColor:[UIColor flatRedColor]];
+    [[UISearchBar appearance] setBarTintColor:[UIColor flatWatermelonColor]];
     
     //Initializing main navigation and menu
     

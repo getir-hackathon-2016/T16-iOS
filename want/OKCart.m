@@ -39,6 +39,8 @@
 - (void) emptyCart
 {
     self.productsInCart = [[NSMutableArray alloc] init];
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"kCartUpdated" object:nil userInfo:nil];
+
 }
 
 @end

@@ -225,7 +225,7 @@
             //[cell setAccessoryType:UITableViewCellAccessoryDetailDisclosureButton];
             
             UIButton *orderButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
-            [orderButton setBackgroundColor:[UIColor flatRedColor]];
+            [orderButton setBackgroundColor:[UIColor flatWatermelonColor]];
             [orderButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [orderButton addTarget:self action:@selector(checkout:) forControlEvents:UIControlEventTouchUpInside];
             [orderButton setTitle:NSLocalizedString(@"Place Order", @"Place Order") forState:UIControlStateNormal];
