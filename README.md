@@ -39,5 +39,12 @@ This is the iOS implementation.
 - JVFloatLabeledTextField - by Jared Verdi and thanks to Matt D. Smith for the original concept.
 - AFNetworking - http://afnetworking.com/
 
+#To-Do
+- Some of the methods in OKConsulate are not implemented yet. They are used to set and retrieve data from backend. These should be connected.
+- App doesn't create a cart and place an order on the backend, but received products and categories are live.
+- Courier tracking is simulated to demonstrate app flow. This should be replaced with data coming from socket.io to display real courier location.
+- User can't add a payment method or an address. Corresponding views should be implemented. This shouldn't take a lot of time, disregarded this because it didn't serve any purpose in this hackathon.
+- Add and option to pick regular order date picking to the order screen.
+- Add a view to see and edit open orders.
 
 
