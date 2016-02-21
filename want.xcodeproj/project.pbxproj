@@ -156,10 +156,10 @@
 		631FD2361C79AC96002361AA /* symbol-moving-annotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2331C79AC96002361AA /* symbol-moving-annotation@2x.png */; };
 		631FD2411C79ACB1002361AA /* HGMapPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2381C79ACB1002361AA /* HGMapPath.m */; };
 		631FD2421C79ACB1002361AA /* HGMovingAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */; };
-		631FD2431C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */; };
 		631FD2441C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */; };
 		631FD2451C79ACB1002361AA /* HGMovingAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2401C79ACB1002361AA /* HGMovingAnnotationView.m */; };
 		631FD2471C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2461C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib */; };
+		631FD2621C79B883002361AA /* launchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2611C79B883002361AA /* launchScreen.png */; };
 		63529DBF1C7809C200599647 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBA1C7809C200599647 /* RECommonFunctions.m */; };
 		63529DC01C7809C200599647 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBC1C7809C200599647 /* RESideMenu.m */; };
 		63529DC11C7809C200599647 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 63529DBE1C7809C200599647 /* UIViewController+RESideMenu.m */; };
@@ -225,7 +225,7 @@
 		638D3D261C77CD9F004F9CA2 /* OKProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D251C77CD9F004F9CA2 /* OKProductListViewController.m */; };
 		638D3D291C77CDA7004F9CA2 /* OKCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D281C77CDA7004F9CA2 /* OKCartViewController.m */; };
 		638D3D2C1C77CDBC004F9CA2 /* OKConfirmOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D2B1C77CDBC004F9CA2 /* OKConfirmOrderViewController.m */; };
-		638D3D2F1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D2E1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m */; };
+		638D3D2F1C77CDCF004F9CA2 /* OKCourierTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D2E1C77CDCF004F9CA2 /* OKCourierTrackingViewController.m */; };
 		638D3D321C77CDDB004F9CA2 /* OKOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D311C77CDDB004F9CA2 /* OKOrderViewController.m */; };
 		638D3D351C77CDE8004F9CA2 /* OKAddCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D341C77CDE8004F9CA2 /* OKAddCreditCardViewController.m */; };
 		638D3D381C77CE14004F9CA2 /* OKUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */; };
@@ -441,13 +441,12 @@
 		631FD2381C79ACB1002361AA /* HGMapPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMapPath.m; sourceTree = "<group>"; };
 		631FD2391C79ACB1002361AA /* HGMovingAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotation.h; sourceTree = "<group>"; };
 		631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotation.m; sourceTree = "<group>"; };
-		631FD23B1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationSampleAppDelegate.h; sourceTree = "<group>"; };
-		631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationSampleAppDelegate.m; sourceTree = "<group>"; };
 		631FD23D1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationSampleViewController.h; sourceTree = "<group>"; };
 		631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationSampleViewController.m; sourceTree = "<group>"; };
 		631FD23F1C79ACB1002361AA /* HGMovingAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGMovingAnnotationView.h; sourceTree = "<group>"; };
 		631FD2401C79ACB1002361AA /* HGMovingAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGMovingAnnotationView.m; sourceTree = "<group>"; };
 		631FD2461C79ACB8002361AA /* HGMovingAnnotationSampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HGMovingAnnotationSampleViewController.xib; sourceTree = "<group>"; };
+		631FD2611C79B883002361AA /* launchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchScreen.png; sourceTree = "<group>"; };
 		63529DB91C7809C200599647 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		63529DBA1C7809C200599647 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		63529DBB1C7809C200599647 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -557,8 +556,8 @@
 		638D3D281C77CDA7004F9CA2 /* OKCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKCartViewController.m; sourceTree = "<group>"; };
 		638D3D2A1C77CDBC004F9CA2 /* OKConfirmOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKConfirmOrderViewController.h; sourceTree = "<group>"; };
 		638D3D2B1C77CDBC004F9CA2 /* OKConfirmOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKConfirmOrderViewController.m; sourceTree = "<group>"; };
-		638D3D2D1C77CDCF004F9CA2 /* OKCourierTrankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKCourierTrankingViewController.h; sourceTree = "<group>"; };
-		638D3D2E1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKCourierTrankingViewController.m; sourceTree = "<group>"; };
+		638D3D2D1C77CDCF004F9CA2 /* OKCourierTrackingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKCourierTrackingViewController.h; sourceTree = "<group>"; };
+		638D3D2E1C77CDCF004F9CA2 /* OKCourierTrackingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKCourierTrackingViewController.m; sourceTree = "<group>"; };
 		638D3D301C77CDDA004F9CA2 /* OKOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKOrderViewController.h; sourceTree = "<group>"; };
 		638D3D311C77CDDB004F9CA2 /* OKOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKOrderViewController.m; sourceTree = "<group>"; };
 		638D3D331C77CDE8004F9CA2 /* OKAddCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKAddCreditCardViewController.h; sourceTree = "<group>"; };
@@ -829,6 +828,7 @@
 		63529DC51C780C7D00599647 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				631FD2611C79B883002361AA /* launchScreen.png */,
 				631FD2311C79AC96002361AA /* path.nmea */,
 				631FD2321C79AC96002361AA /* symbol-moving-annotation.png */,
 				631FD2331C79AC96002361AA /* symbol-moving-annotation@2x.png */,
@@ -1052,8 +1052,8 @@
 				638D3D281C77CDA7004F9CA2 /* OKCartViewController.m */,
 				638D3D2A1C77CDBC004F9CA2 /* OKConfirmOrderViewController.h */,
 				638D3D2B1C77CDBC004F9CA2 /* OKConfirmOrderViewController.m */,
-				638D3D2D1C77CDCF004F9CA2 /* OKCourierTrankingViewController.h */,
-				638D3D2E1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m */,
+				638D3D2D1C77CDCF004F9CA2 /* OKCourierTrackingViewController.h */,
+				638D3D2E1C77CDCF004F9CA2 /* OKCourierTrackingViewController.m */,
 				638D3D361C77CE14004F9CA2 /* OKUserProfileViewController.h */,
 				638D3D371C77CE14004F9CA2 /* OKUserProfileViewController.m */,
 				638D3D301C77CDDA004F9CA2 /* OKOrderViewController.h */,
@@ -1064,8 +1064,6 @@
 				631FD2381C79ACB1002361AA /* HGMapPath.m */,
 				631FD2391C79ACB1002361AA /* HGMovingAnnotation.h */,
 				631FD23A1C79ACB1002361AA /* HGMovingAnnotation.m */,
-				631FD23B1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.h */,
-				631FD23C1C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m */,
 				631FD23D1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.h */,
 				631FD23E1C79ACB1002361AA /* HGMovingAnnotationSampleViewController.m */,
 				631FD23F1C79ACB1002361AA /* HGMovingAnnotationView.h */,
@@ -1458,6 +1456,7 @@
 				63529DF61C78420200599647 /* snacks_1.png in Resources */,
 				631FD1A21C798CED002361AA /* product-11.jpeg in Resources */,
 				63529DE91C78420200599647 /* ice.png in Resources */,
+				631FD2621C79B883002361AA /* launchScreen.png in Resources */,
 				631FD1C61C798CED002361AA /* product-47.jpeg in Resources */,
 				631FD22A1C79A2A7002361AA /* 826-money-1-toolbar@3x.png in Resources */,
 				631FD20C1C798CED002361AA /* product-117.jpeg in Resources */,
@@ -1539,7 +1538,7 @@
 				638D3D481C77DDBB004F9CA2 /* NSString+TextDirectionality.m in Sources */,
 				638D3D691C77EE58004F9CA2 /* ChameleonConstants.m in Sources */,
 				638D3DAD1C77F5C2004F9CA2 /* RZVerticalSwipeInteractionController.m in Sources */,
-				638D3D2F1C77CDCF004F9CA2 /* OKCourierTrankingViewController.m in Sources */,
+				638D3D2F1C77CDCF004F9CA2 /* OKCourierTrackingViewController.m in Sources */,
 				638D3D721C77EE58004F9CA2 /* UIView+ChameleonPrivate.m in Sources */,
 				631FD1161C79891C002361AA /* UIButton+Badge.m in Sources */,
 				638D3D6F1C77EE58004F9CA2 /* UIImage+ChameleonPrivate.m in Sources */,
@@ -1599,7 +1598,6 @@
 				638D3DB91C77F5C2004F9CA2 /* UIImage+RZTransitionsSnapshotHelpers.m in Sources */,
 				638D3D6C1C77EE58004F9CA2 /* UIButton+Chameleon.m in Sources */,
 				638D3D321C77CDDB004F9CA2 /* OKOrderViewController.m in Sources */,
-				631FD2431C79ACB1002361AA /* HGMovingAnnotationSampleAppDelegate.m in Sources */,
 				638D3DBF1C7802E4004F9CA2 /* OKMainNavigationController.m in Sources */,
 				638D3DB21C77F5C2004F9CA2 /* RZSegmentControlMoveFadeAnimationController.m in Sources */,
 				638D3CD41C77BE4F004F9CA2 /* OKProductCategory.m in Sources */,

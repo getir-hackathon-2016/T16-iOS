@@ -129,7 +129,48 @@
 
 - (void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    //User location changed.
+    if (!firstLocationUpdate_) {
+        MKCoordinateRegion region = { { 0.0, 0.0 }, { 0.0, 0.0 } };
+        region.center.latitude = self.locationManager.location.coordinate.latitude;
+        region.center.longitude = self.locationManager.location.coordinate.longitude;
+        region.span.longitudeDelta = 0.05f;
+        region.span.longitudeDelta = 0.05f;
+        [self.mapView setRegion:region animated:YES];
+        
+     
+    
+        //User location changed.
+        CLGeocoder *ceo = [[CLGeocoder alloc]init];
+        CLLocation *loc = [[CLLocation alloc]initWithLatitude:userLocation.location.coordinate.latitude longitude:userLocation.location.coordinate.longitude]; //insert your coordinates
+        
+        [ceo reverseGeocodeLocation:loc
+                  completionHandler:^(NSArray *placemarks, NSError *error) {
+                      CLPlacemark *placemark = [placemarks objectAtIndex:0];
+                      
+                      locationLabel.text = [NSString stringWithFormat:@"%@, %@",placemark.name,placemark.locality];
+                      /*
+                      NSLog(@"placemark %@",placemark);
+                      //String to hold address
+                      NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+                      NSLog(@"addressDictionary %@", placemark.addressDictionary);
+                      
+                      NSLog(@"placemark %@",placemark.region);
+                      NSLog(@"placemark %@",placemark.country);  // Give Country Name
+                      NSLog(@"placemark %@",placemark.locality); // Extract the city name
+                      NSLog(@"location %@",placemark.name);
+                      NSLog(@"location %@",placemark.ocean);
+                      NSLog(@"location %@",placemark.postalCode);
+                      NSLog(@"location %@",placemark.subLocality);
+                      
+                      NSLog(@"location %@",placemark.location);
+                      //Print the location to console
+                      NSLog(@"I am currently at %@",locatedAt);
+                       */
+                  }
+         ];
+        
+        firstLocationUpdate_ = YES;
+    }
 }
 
 
@@ -226,7 +267,7 @@
         [headerLabel setText:NSLocalizedString(@"DELIVERY ADDRESS", @"DELIVERY ADDRESS")];
         [headerLabel setTextColor:[UIColor flatRedColor]];
         
-        UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, SCREEN_WIDTH - 60, 20)];
+        locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, SCREEN_WIDTH - 60, 20)];
         [locationLabel setFont:[UIFont systemFontOfSize:16 weight:UIFontWeightLight]];
         [locationLabel setText:NSLocalizedString(@"Locating your address", @"Locating your address")];
         [locationLabel setTextColor:[UIColor flatRedColor]];

@@ -36,4 +36,9 @@
     return _sharedObject;
 }
 
+- (void) emptyCart
+{
+    self.productsInCart = [[NSMutableArray alloc] init];
+}
+
 @end

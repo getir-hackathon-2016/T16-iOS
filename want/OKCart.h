@@ -28,5 +28,5 @@
 @property (nonatomic) int *cartDeliveryStatus;
 
 + (id)currentCart;
-
+- (void) emptyCart;
 @end

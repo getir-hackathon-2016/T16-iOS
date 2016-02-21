@@ -17,6 +17,7 @@
     BOOL firstLocationUpdate_;
     CLLocationCoordinate2D storedLocation;
     NSArray *productCategories;
+    UILabel *locationLabel;
 }
 
 

@@ -56,6 +56,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.navigationItem setHidesBackButton:YES];
+    self.title = NSLocalizedString(@"Courier Tracking", @"Courier Tracking");
+    
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(closeModal:)];
+    
+    self.navigationItem.rightBarButtonItem = closeButton;
 	// create the path for the moving object
 	NSString *nmeaLogPath = [[NSBundle mainBundle] pathForResource:@"path" ofType:@"nmea"];
 	HGMapPath *path = [[HGMapPath alloc] initFromFile:nmeaLogPath];
@@ -63,7 +69,10 @@
 	
 }
 
-
+- (void) closeModal:(id) sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 // Override to allow orientations other than the default portrait orientation.

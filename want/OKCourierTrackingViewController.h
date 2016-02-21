@@ -1,5 +1,5 @@
 //
-//  OKCourierTrankingViewController.h
+//  OKCourierTrackingViewController.h
 //  want
 //
 //  Created by Omer Karisman on 20/02/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OKCourierTrankingViewController : UIViewController
+@interface OKCourierTrackingViewController : UIViewController
 
 @end

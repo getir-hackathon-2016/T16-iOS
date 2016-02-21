@@ -280,8 +280,14 @@
 
 - (void) checkout: (UIButton *)sender
 {
+    [[OKCart currentCart] emptyCart];
+
     HGMovingAnnotationSampleViewController *movingDot = [[HGMovingAnnotationSampleViewController alloc] initWithNibName:@"HGMovingAnnotationSampleViewController" bundle:nil];
-    [self.navigationController pushViewController:movingDot animated:YES];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:movingDot];
+
+    [self.navigationController presentViewController:navigationController animated:YES completion:^{
+        [self.navigationController popToRootViewControllerAnimated:NO];
+    }];
 }
 
 
