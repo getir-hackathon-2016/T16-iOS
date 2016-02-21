@@ -32,12 +32,12 @@ This is the iOS implementation.
 
 
 #T16-iOS Third Party Libraries
-- RESideMenu - (https://github.com/romaonthego)
+- RESideMenu - https://github.com/romaonthego
 - UICKeyChainStore - by Kishikawa Katsumi
 - RZTransitions - http://raizlabs.com/
 - Chameleon - by Vicc Alexander
 - JVFloatLabeledTextField - by Jared Verdi and thanks to Matt D. Smith for the original concept.
-- AFNetworking - http://afnetworking.com/)
+- AFNetworking - http://afnetworking.com/
 
 
 
