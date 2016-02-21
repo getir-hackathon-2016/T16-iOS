@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OKCart.h"
 
-@interface OKCartViewController : UIViewController
+@interface OKCartViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    UIButton *orderButton;
+}
+@property (nonatomic,retain) NSString *cartId;
+@property (nonatomic,retain) UITableView *tableView;
 
 @end

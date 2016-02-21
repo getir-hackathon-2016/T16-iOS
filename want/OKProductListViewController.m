@@ -13,6 +13,8 @@
 #import "Chameleon.h"
 #import "UIBarButtonItem+Badge.h"
 #import "UIButton+Badge.h"
+#import "OKCart.h"
+#import "RESideMenu.h"
 
 @implementation OKProductListViewController
 
@@ -27,15 +29,11 @@
     UIImage *image = [[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0,0,image.size.width, image.size.height);
-    [button addTarget:self action:@selector(showCart:) forControlEvents:UIControlEventTouchDown];
+    [button addTarget:self.sideMenuViewController action:@selector(presentRightMenuViewController) forControlEvents:UIControlEventTouchDown];
     [button setBackgroundImage:image forState:UIControlStateNormal];
     
-    // Make BarButton Item
     cartButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    //cartButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self action:@selector(showCart)];
-    
-    
+
     self.navigationItem.rightBarButtonItem = cartButton;
     self.navigationItem.rightBarButtonItem.shouldAnimateBadge = YES;
     self.navigationItem.rightBarButtonItem.shouldHideBadgeAtZero = YES;
@@ -53,6 +51,16 @@
     
     [self.tableView pinToSuperviewEdgesWithInset:UIEdgeInsetsZero];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(cartUpdated:)
+                                                 name:@"kCartUpdated"
+                                               object:nil];
+    
+}
+
+- (void) cartUpdated:(NSNotification *) notification
+{
+    self.navigationItem.rightBarButtonItem.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)[[[OKCart currentCart] productsInCart] count]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -86,12 +94,14 @@
         
         [addToCartButton setTitle:NSLocalizedString(@"Buy", @"Buy") forState:UIControlStateNormal];
         [addToCartButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+        [addToCartButton.titleLabel setFont:[UIFont systemFontOfSize:12 weight:UIFontWeightLight]];
         [addToCartButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
         [addToCartButton.layer setCornerRadius:2];
         [addToCartButton.layer setBorderWidth:1];
         [cell addSubview:addToCartButton];
 
     }
+    
     
     // Here we use the provided setImageWithURL: method to load the web image
     // Ensure you use a placeholder image otherwise cells will be initialized with no image
@@ -115,9 +125,15 @@
 
 - (void) addToCart: (UIButton *)sender
 {
-    int value = self.navigationItem.rightBarButtonItem.badgeValue.intValue;
-    value ++;
-    self.navigationItem.rightBarButtonItem.badgeValue = [NSString stringWithFormat:@"%i",value];
+ 
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    
+    
+    [[[OKCart currentCart] productsInCart] addObject:[products objectAtIndex:indexPath.row]];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName: @"kCartUpdated" object:nil userInfo:nil];
+
 }
 
 @end

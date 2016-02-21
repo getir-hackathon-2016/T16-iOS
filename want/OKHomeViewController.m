@@ -15,6 +15,9 @@
 #import "OKProductListViewController.h"
 #import "OKConsulate.h"
 #import "OKProductCategory.h"
+#import "UIButton+Badge.h"
+#import "UIBarButtonItem+Badge.h"
+#import "OKCart.h"
 
 #define TABLE_VIEW_HEIGHT self.view.frame.size.height
 #define SCREEN_WIDTH self.view.frame.size.width
@@ -41,9 +44,20 @@
     
     self.navigationItem.leftBarButtonItem = menuButton;
     
-    UIBarButtonItem *cartButton = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStylePlain target:self action:@selector(showCart)];
+    UIImage *image = [[UIImage imageNamed:@"762-shopping-bag-toolbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0,0,image.size.width, image.size.height);
+    [button addTarget:self.sideMenuViewController action:@selector(presentRightMenuViewController) forControlEvents:UIControlEventTouchDown];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    
+    UIBarButtonItem *cartButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     self.navigationItem.rightBarButtonItem = cartButton;
+    self.navigationItem.rightBarButtonItem.shouldAnimateBadge = YES;
+    self.navigationItem.rightBarButtonItem.shouldHideBadgeAtZero = YES;
+    self.navigationItem.rightBarButtonItem.badgeValue = @"0";
+    self.navigationItem.rightBarButtonItem.badgeBGColor = [UIColor whiteColor];
+    self.navigationItem.rightBarButtonItem.badgeTextColor = [UIColor flatRedColor];
     
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
@@ -56,6 +70,16 @@
     }];
     
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(cartUpdated:)
+                                                 name:@"kCartUpdated"
+                                               object:nil];
+    
+}
+
+- (void) cartUpdated:(NSNotification *) notification
+{
+    self.navigationItem.rightBarButtonItem.badgeValue = [NSString stringWithFormat:@"%lu",(unsigned long)[[[OKCart currentCart] productsInCart] count]];
 }
 
 

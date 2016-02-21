@@ -172,7 +172,9 @@
 
                 product.productId = productObj[@"_id"];
                 product.productName = productObj[@"name"];
-                product.productPriceValue = productObj[@"price"];
+                NSLog(@"Class:%@",[productObj[@"price"] class]);
+                
+                product.productPriceValue = [NSDecimalNumber decimalNumberWithDecimal:[productObj[@"price"] decimalValue]];
                 [enumeratedObjects addObject:product];
             }];
             

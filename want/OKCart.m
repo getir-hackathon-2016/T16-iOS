@@ -14,7 +14,7 @@
 {
     if (self = [super init])
     {
-                
+        self.productsInCart = [[NSMutableArray alloc] init];
     }
     return self;
 }

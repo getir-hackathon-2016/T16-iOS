@@ -13,6 +13,7 @@
 #import "OKMainNavigationController.h"
 #import "OKHomeViewController.h"
 #import "OKMenuViewController.h"
+#import "OKCartViewController.h"
 
 @interface AppDelegate ()
 
@@ -55,12 +56,12 @@
     //
     OKMainNavigationController *navigationController = [[OKMainNavigationController alloc] initWithRootViewController:[[OKHomeViewController alloc] init]];
     OKMenuViewController *leftMenuViewController = [[OKMenuViewController alloc] init];
-    
+    OKCartViewController *rightMenuViewController = [[OKCartViewController alloc] init];
     // Create side menu controller
     //
     RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
                                                                     leftMenuViewController:leftMenuViewController
-                                                                   rightMenuViewController:nil];
+                                                                   rightMenuViewController:rightMenuViewController];
     
     // Make it a root controller
     //

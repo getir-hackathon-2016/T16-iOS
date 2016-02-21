@@ -27,4 +27,6 @@
 //See OKConstants.m for available values
 @property (nonatomic) int *cartDeliveryStatus;
 
++ (id)currentCart;
+
 @end
